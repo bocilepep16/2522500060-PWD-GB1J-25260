@@ -3,4 +3,5 @@ Nim : 2522500060 <br>
 Nama : Catherine Audreylia Diony <br>
 
 Hari ini, kamis 02.Okt.2025 kami belajar: <br>
-1) <br>
+1) ternyata, struktur html tidak perlu ditulis lengkap, karena browser punya error tolerance<br>
+2) 
