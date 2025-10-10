@@ -36,7 +36,19 @@
         </section>
         <section id="Contact">
             <h2>Kontak Saya</h2>
-            <p>HTML Form</p>
+            <form action="" method="get">
+                <label for="txtNama">Nama:</label>
+                <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama" required autocomplete="name">
+                
+                <label for="txtEmail">Email:</label>
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+                
+                <label for="txtPesan">pesan:</label>
+                <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+                
+                <button type="submit">kirim </button>
+                <button type="reset">Batal </button>
+            </form>
         </section>
     </main>
     <footer>
