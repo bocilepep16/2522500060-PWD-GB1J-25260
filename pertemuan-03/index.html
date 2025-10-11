@@ -53,6 +53,79 @@
                 margin-bottom: 2px;
             }
         }
+
+        #contact {
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 40px auto;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #contact h2 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #contact label {
+            font-weight: bold;
+            color: #004d40;
+        }
+
+        #contact input[type="text"],
+        #contact input[type="email"],
+        #contact input[type="color"],
+        #contact textarea {
+            padding: 10px 14px;
+            border: 1.5px solid #00796b;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        #contact input:focus,
+        #contact textarea:focus {
+            outline: none;
+            border-color: #004d40;
+            background-color: #e0f2f1;
+        }
+
+        #contact button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #contact button[type="submit"] {
+            background-color: #00796b;
+        }
+
+        #contact button[type="submit"]:hover {
+            background-color: #004d40;
+        }
+
+        #contact button[type="reset"] {
+            background-color: #b0bec5;
+        }
+
+        #contact button[type="reset"]:hover {
+            background-color: #78909c;
+        }
+
     </style>
 </head>
 
@@ -88,8 +161,7 @@
         <section id="Contact">
             <h2>Kontak Saya</h2>
             <form action="" method="get">
-                <input type="color"
-                <label for="txtNama">Nama:</label>
+                <input type="color" <label for="txtNama">Nama:</label>
                 <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama" required autocomplete="name">
 
                 <label for="txtEmail">Email:</label>
