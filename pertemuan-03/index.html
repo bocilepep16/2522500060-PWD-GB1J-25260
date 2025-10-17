@@ -69,30 +69,41 @@
             margin-right: 8px;
         }
 
-        #contact button{type="submit"} {
+        #contact button {type="submit"} {
             background-color: #003366;
             color: #fff;
             font-weight: 600;
         }
 
-        #contact button{type="reset"} {
+        #contact button {type="reset"} {
             background-color: #b4b4b4;
             color: 272727;
             font-weight: 500;
         }
 
-            @media (max-width: 600px) {
-                #about p {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
+        #contact button[type="submit"]:hover {
+            background-color: #0379ee;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
 
-                #about strong {
-                    text-align: left;
-                    padding-right: 0;
-                    margin-bottom: 2px;
-                }
+        #contact button[type="reset"]:hover {
+            background-color: #cccccc;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 600px) {
+            #about p {
+                flex-direction: column;
+                align-items: flex-start;
             }
+
+            #about strong {
+                text-align: left;
+                padding-right: 0;
+                margin-bottom: 2px;
+            }
+        }
     </style>
 
 </head>
