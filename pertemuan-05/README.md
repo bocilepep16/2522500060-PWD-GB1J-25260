@@ -11,4 +11,5 @@ Hari Ini, 23 Oktober 2025, Saya Mempelajari:
   <li>class menu-toggle mobile</li>
   <li>styling nav mobile</li>
   <li>styling nav menu mobile</li>
+  <li>membuat script.js</li>
 </ol>
