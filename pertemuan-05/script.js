@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     applyResponsiveLayout();
   }
 
-function applyResponsiveLayout() {
+  function applyResponsiveLayout() {
     const label = document.querySelector('label[for="txtPesan"]');
     const span = label?.querySelector('span');
     const wrapper = label?.querySelector('[data-wrapper="pesan-wrapper"]');
@@ -92,8 +92,8 @@ function applyResponsiveLayout() {
       counter.style.width = 'auto';
     }
   }
-setupCharCountLayout();
-window.addEventListener('resize', applyResponsiveLayout);
+  setupCharCountLayout();
+  window.addEventListener('resize', applyResponsiveLayout);
 });
 
 const homeSection = document.getElementById("home");
@@ -127,7 +127,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     isValid = false;
   }
 
-  if (pesan.value.trim() .length < 10) {
+  if (pesan.value.trim().length < 10) {
     showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
     isValid = false;
   }
