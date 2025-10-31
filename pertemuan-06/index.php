@@ -19,7 +19,7 @@
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#contact">Kontak</a></li>
-                <li><a href="ipk">Nilai</a></li>
+                <li><a href="#ipk">Nilai</a></li>
             </ul>
         </nav>
     </header>
@@ -94,7 +94,6 @@
             $sksMatkul3 = 2;
             $sksMatkul4 = 3;
             $sksMatkul5 = 3;
-
 
             $nilaiHadir1 = 90; $nilaiTugas1 = 60; $nilaiUTS1 = 80; $nilaiUAS1 = 70;
             $nilaiHadir2 = 70; $nilaiTugas2 = 50; $nilaiUTS2 = 60; $nilaiUAS2 = 80;

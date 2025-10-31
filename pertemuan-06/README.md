@@ -10,4 +10,5 @@ Hari Ini, Kamis 30 Oktober 2025, Saya Mempelajari:
   <li>variabel php kesection #about</li>
   <li>latihan hallo dunia php</li>
   <li>membuat section ipk</li>
+  <li>styling section ipk</li>
 </ol>

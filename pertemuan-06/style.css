@@ -79,7 +79,8 @@ footer {
 
         #home,
         #about,
-        #contact {
+        #contact,
+        #ipk {
             background-color: #ffffff;
             border-radius: 10px;
             padding: 20px;
@@ -90,7 +91,8 @@ footer {
 
         #home h2,
         #about h2,
-        #contact h2 {
+        #contact h2,
+        #ipk h2 {
             color: #003366;
             border-bottom: 2px solid #003366;
             padding-bottom: 6px;
@@ -205,7 +207,8 @@ footer {
             z-index: 1000;
           }
             #about p,
-            #contact label {
+            #contact label,
+            #ipk {
                 flex-direction: column;
                 align-items: flex-start;
             }
