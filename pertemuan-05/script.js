@@ -107,6 +107,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const nama = document.getElementById("txtNama");
   const email = document.getElementById("txtEmail");
   const pesan = document.getElementById("txtPesan");
+  e.preventDefault();
 
   document.querySelectorAll(".error-msg").forEach(el => el.remove());
   [nama, email, pesan].forEach(el => el.style.border = "");
@@ -129,6 +130,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
     isValid = false;
   }
 
+  if (pesan.value.trim() === "") {
+    showError(pesan, "pesan wajib diisi.");
+    isValid = false;
+  }
   if (pesan.value.trim().length < 10) {
     showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
     isValid = false;

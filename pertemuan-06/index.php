@@ -27,12 +27,22 @@
             <h2>Selamat Datang</h2>
             <p>Ini contoh paragraf HTML.</p>
             <?php 
-            echo "Halo Dunia!";
+            echo "Halo Dunia!<br>";
+            echo "Nama Saya Catherine";
             ?>
         </section>
         <section id="about">
+            <?php
+            $nim = "2522500060";
+            $nama = "Catherine Audreylia Diony";
+            ?>
             <h2>Tentang Saya</h2>
-            <p><strong>NIM:</strong> 2522500060</p>
+            <p>
+                <strong>NIM:</strong> 
+                <?php
+                echo $nim;
+                ?>
+            </p>
             <p><strong>Nama Lengkap:</strong> Catherine Audreylia Diony &#128526;</p>
             <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
             <p><strong>Tanggal Lahir:</strong> 30 Juni 2007</p>
