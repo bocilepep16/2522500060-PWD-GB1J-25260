@@ -9,4 +9,5 @@ Hari Ini, Kamis 30 Oktober 2025, Saya Mempelajari:
   <li>script php hello word</li>
   <li>variabel php kesection #about</li>
   <li>latihan hallo dunia php</li>
+  <li>membuat section ipk</li>
 </ol>
