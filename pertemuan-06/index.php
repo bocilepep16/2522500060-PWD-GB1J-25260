@@ -35,23 +35,26 @@
             <?php
             $nim = "2522500060";
             $nama = "Catherine Audreylia Diony";
+            $tempatlahir = "Pangkalpinang";
+            $tangallahhir = "30 Juni 2007";
+            $hobi = "Olahraga & Menonton Drakor";
+            $pasangan = "Belum ada";
+            $pekerjaan = "Mahasiswa";
+            $namaorangtua = "Bapak Bong Sui Kong dan Ibu Susanti";
+            $namakakak = "Yohan dan Nicholas";
+            $namaadik = "Calvin dan Justin";
             ?>
             <h2>Tentang Saya</h2>
-            <p>
-                <strong>NIM:</strong> 
-                <?php
-                echo $nim;
-                ?>
-            </p>
-            <p><strong>Nama Lengkap:</strong> Catherine Audreylia Diony &#128526;</p>
-            <p><strong>Tempat Lahir:</strong> Pangkalpinang</p>
-            <p><strong>Tanggal Lahir:</strong> 30 Juni 2007</p>
-            <p><strong>Hobi:</strong> Olahraga &amp; Menonton Drakor &#128512;</p>
-            <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-            <p><strong>Pekerjaan:</strong> Mahasiswa &copy; 2025</p>
-            <p><strong>Nama Orang Tua:</strong> Bapak Bong Sui Kong dan Ibu Susanti</p>
-            <p><strong>Nama Kakak:</strong> Yohan dan Nicholas</p>
-            <p><strong>Nama Adik:</strong> Calvin dan Justin</p>
+            <p><strong>NIM:</strong> <?php echo $nim;?> </p>
+            <p><strong>Nama Lengkap:</strong> <?php echo $nama;?> &#128526;</p>
+            <p><strong>Tempat Lahir:</strong> <?php echo $tempatlahir;?> </p>
+            <p><strong>Tanggal Lahir:</strong> <?php echo $tangallahhir;?> </p>
+            <p><strong>Hobi:</strong> <?php echo $hobi;?> &#128512;</p>
+            <p><strong>Pasangan:</strong> <?php echo $pasangan;?> &hearts;</p>
+            <p><strong>Pekerjaan:</strong> <?php echo $pekerjaan;?> &copy; 2025</p>
+            <p><strong>Nama Orang Tua:</strong> <?php echo $namaorangtua;?> </p>
+            <p><strong>Nama Kakak:</strong> <?php echo $namakakak;?></p>
+            <p><strong>Nama Adik:</strong> <?php echo $namaadik;?></p>
         </section>
         <section id="contact">
             <h2>Kontak Saya</h2>
