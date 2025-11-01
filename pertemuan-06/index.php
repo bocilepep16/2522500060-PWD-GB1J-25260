@@ -140,25 +140,25 @@
                 $status = ($grade == "D" || $grade == "E") ? "Gagal" : "Lulus";
 
             echo "<h3>Nama Mata Kuliah ke-$i : $nama</h3>";
-            echo "<strong>SKS :</strong> $sks<br>";
-            echo "<strong>Kehadiran :</strong> $hadir<br>";
-            echo "<strong>Tugas :</strong> $tugas<br>";
-            echo "<strong>UTS :</strong> $uts<br>";
-            echo "<strong>UAS :</strong> $uas<br>";
-            echo "<strong>Nilai Akhir :</strong> " . number_format($akhir, 2) . "<br>";
-            echo "<strong>Grade :</strong> $grade<br>";
-            echo "<strong>Angka Mutu :</strong> $mutu<br>";
-            echo "<strong>Bobot :</strong> $bobot<br>";
-            echo "<strong>Status :</strong> $status<br><hr>";
+            echo "<p><strong>SKS </strong>: $sks</p>";
+            echo "<p><strong>Kehadiran </strong>: $hadir</p>";
+            echo "<p><strong>Tugas </strong>: $tugas</p>";
+            echo "<p><strong>UTS </strong>: $uts</p>";
+            echo "<p><strong>UAS </strong>: $uas</p>";
+            echo "<p><strong>Nilai Akhir </strong>: " . number_format($akhir, 2) ."</p>";
+            echo "<p><strong>Grade </strong>: $grade</p>";
+            echo "<p><strong>Angka Mutu </strong>: $mutu</p>";
+            echo "<p><strong>Bobot </strong>: $bobot</p>";
+            echo "<p><strong>Status </strong>: $status</p><hr>";
             $totalBobot += $bobot;
             $totalSKS += $sks;
             $i++;
     }   
         $IPK = $totalBobot / $totalSKS;
 
-        echo "<h3><strong>Total Bobot =</strong> $totalBobot</h3>";
-        echo "<h3><strong>Total SKS =</strong> $totalSKS</h3>";
-        echo "<h3><strong>IPK =</strong> " . number_format($IPK, 2) . "</h3>";
+        echo "<p><strong>Total Bobot </strong>= $totalBobot</p>";
+        echo "<p><strong>Total SKS </strong>= $totalSKS</p>";
+        echo "<p><strong>IPK </strong>= " . number_format($IPK, 2) . "</p>";
         ?>
         </section>
 
