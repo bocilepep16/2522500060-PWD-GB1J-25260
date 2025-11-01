@@ -139,7 +139,7 @@
                 $bobot = $mutu * $sks;
                 $status = ($grade == "D" || $grade == "E") ? "Gagal" : "Lulus";
 
-            echo "<h3>Nama Mata Kuliah ke-$i : $nama</h3>";
+            echo "<p><strong>Nama MataKuliah ke-$i : $nama</strong></p>";
             echo "<p><strong>SKS </strong>: $sks</p>";
             echo "<p><strong>Kehadiran </strong>: $hadir</p>";
             echo "<p><strong>Tugas </strong>: $tugas</p>";

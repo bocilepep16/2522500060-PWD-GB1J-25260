@@ -140,11 +140,11 @@ footer {
 }
 
 #ipk strong {
-  min-width: 150px;
+  min-width: 175px;
   color: #003366;
   font-weight: 600;
   text-align: left;
-  padding-right: 6px;
+  padding-right: 16px;
   flex-shrink: 0;
 }
 
