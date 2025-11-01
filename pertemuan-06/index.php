@@ -27,7 +27,7 @@
         <section id="home">
             <h2>Selamat Datang</h2>
             <p>Ini contoh paragraf HTML.</p>
-            <?php 
+            <?php
             echo "Halo Dunia!<br>";
             echo "Nama Saya Catherine";
             ?>
@@ -46,16 +46,16 @@
             $namaadik = "Calvin dan Justin";
             ?>
             <h2>Tentang Saya</h2>
-            <p><strong>NIM:</strong> <?php echo $nim;?> </p>
-            <p><strong>Nama Lengkap:</strong> <?php echo $nama;?> &#128526;</p>
-            <p><strong>Tempat Lahir:</strong> <?php echo $tempatlahir;?> </p>
-            <p><strong>Tanggal Lahir:</strong> <?php echo $tangallahhir;?> </p>
-            <p><strong>Hobi:</strong> <?php echo $hobi;?> &#128512;</p>
-            <p><strong>Pasangan:</strong> <?php echo $pasangan;?> &hearts;</p>
-            <p><strong>Pekerjaan:</strong> <?php echo $pekerjaan;?> &copy; 2025</p>
-            <p><strong>Nama Orang Tua:</strong> <?php echo $namaorangtua;?> </p>
-            <p><strong>Nama Kakak:</strong> <?php echo $namakakak;?></p>
-            <p><strong>Nama Adik:</strong> <?php echo $namaadik;?></p>
+            <p><strong>NIM:</strong> <?php echo $nim; ?> </p>
+            <p><strong>Nama Lengkap:</strong> <?php echo $nama; ?> &#128526;</p>
+            <p><strong>Tempat Lahir:</strong> <?php echo $tempatlahir; ?> </p>
+            <p><strong>Tanggal Lahir:</strong> <?php echo $tangallahhir; ?> </p>
+            <p><strong>Hobi:</strong> <?php echo $hobi; ?> &#128512;</p>
+            <p><strong>Pasangan:</strong> <?php echo $pasangan; ?> &hearts;</p>
+            <p><strong>Pekerjaan:</strong> <?php echo $pekerjaan; ?> &copy; 2025</p>
+            <p><strong>Nama Orang Tua:</strong> <?php echo $namaorangtua; ?> </p>
+            <p><strong>Nama Kakak:</strong> <?php echo $namakakak; ?></p>
+            <p><strong>Nama Adik:</strong> <?php echo $namaadik; ?></p>
         </section>
         <section id="contact">
             <h2>Kontak Saya</h2>
@@ -71,7 +71,8 @@
                 </label>
 
                 <label for="txtPesan"><span>Pesan Anda:</span>
-                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
+                        required></textarea>
                     <small id="charCount">0/200 Karakter</small>
                 </label>
 
@@ -79,7 +80,7 @@
                 <button type="reset">Batal </button>
             </form>
         </section>
-        <section id="ipk">
+         <section id="ipk">
             <?php
             echo "<h2>Perhitungan Nilai Akhir, Grade, dan IPK</h2>";
 
@@ -119,43 +120,43 @@
     }
 
         $mataKuliah = [
-            [$namaMatkul1, $sksMatkul1, $nilaiHadir1, $nilaiTugas1, $nilaiUTS1, $nilaiUAS1],
-            [$namaMatkul2, $sksMatkul2, $nilaiHadir2, $nilaiTugas2, $nilaiUTS2, $nilaiUAS2],
+            [$namaMatkul1, $sksMatkul1, $nilaiHadir1, $nilaiTugas1, $nilaiUTS1, $nilaiUAS1], 
+            [$namaMatkul2, $sksMatkul2, $nilaiHadir2, $nilaiTugas2, $nilaiUTS2, $nilaiUAS2], 
             [$namaMatkul3, $sksMatkul3, $nilaiHadir3, $nilaiTugas3, $nilaiUTS3, $nilaiUAS3],
             [$namaMatkul4, $sksMatkul4, $nilaiHadir4, $nilaiTugas4, $nilaiUTS4, $nilaiUAS4],
             [$namaMatkul5, $sksMatkul5, $nilaiHadir5, $nilaiTugas5, $nilaiUTS5, $nilaiUAS5],
         ];
 
-    $totalBobot = 0;
-    $totalSKS = 0;
-    $i = 1;
+            $totalBobot = 0;
+            $totalSKS = 0;
+            $i = 1;
 
-    foreach ($mataKuliah as $mk) {
-        list($nama, $sks, $hadir, $tugas, $uts, $uas) = $mk;
+            foreach ($mataKuliah as $mk) {
+                list($nama, $sks, $hadir, $tugas, $uts, $uas) = $mk;
 
-        $akhir = nilaiAkhir($hadir, $tugas, $uts, $uas);
-        list($grade, $mutu) = hitungGrade($akhir);
-        $bobot = $mutu * $sks;
-        $status = ($grade == "D" || $grade == "E") ? "Gagal" : "Lulus";
+                $akhir = nilaiAkhir($hadir, $tugas, $uts, $uas);
+                list($grade, $mutu) = hitungGrade($akhir);
+                $bobot = $mutu * $sks;
+                $status = ($grade == "D" || $grade == "E") ? "Gagal" : "Lulus";
 
             echo "<h3>Nama Mata Kuliah ke-$i : $nama</h3>";
-            echo "SKS : $sks<br>";
-            echo "Kehadiran : $hadir<br>";
-            echo "Tugas : $tugas<br>";
-            echo "UTS : $uts<br>";
-            echo "UAS : $uas<br>";
-            echo "Nilai Akhir : " . number_format($akhir, 2) . "<br>";
-            echo "Grade : $grade<br>";
-            echo "Angka Mutu : $mutu<br>";
-            echo "Bobot : $bobot<br>";
-            echo "Status : $status<br><hr>";
+            echo "<strong>SKS :</strong> $sks<br>";
+            echo "<strong>Kehadiran :</strong> $hadir<br>";
+            echo "<strong>Tugas :</strong> $tugas<br>";
+            echo "<strong>UTS :</strong> $uts<br>";
+            echo "<strong>UAS :</strong> $uas<br>";
+            echo "<strong>Nilai Akhir :</strong> " . number_format($akhir, 2) . "<br>";
+            echo "<strong>Grade :</strong> $grade<br>";
+            echo "<strong>Angka Mutu :</strong> $mutu<br>";
+            echo "<strong>Bobot :</strong> $bobot<br>";
+            echo "<strong>Status :</strong> $status<br><hr>";
             $totalBobot += $bobot;
             $totalSKS += $sks;
             $i++;
     }   
         $IPK = $totalBobot / $totalSKS;
 
-        echo "<h3>Total Bobot = $totalBobot</h3>";
+        echo "<h3>Total Bobot = $totalBobot<h/3>";
         echo "<h3>Total SKS = $totalSKS</h3>";
         echo "<h3>IPK = " . number_format($IPK, 2) . "</h3>";
         ?>
@@ -168,5 +169,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
