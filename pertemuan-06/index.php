@@ -156,9 +156,9 @@
     }   
         $IPK = $totalBobot / $totalSKS;
 
-        echo "<h3>Total Bobot = $totalBobot<h/3>";
-        echo "<h3>Total SKS = $totalSKS</h3>";
-        echo "<h3>IPK = " . number_format($IPK, 2) . "</h3>";
+        echo "<h3><strong>Total Bobot =</strong> $totalBobot</h3>";
+        echo "<h3><strong>Total SKS =</strong> $totalSKS</h3>";
+        echo "<h3><strong>IPK =</strong> " . number_format($IPK, 2) . "</h3>";
         ?>
         </section>
 

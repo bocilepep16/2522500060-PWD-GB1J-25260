@@ -100,6 +100,13 @@ footer {
   margin-bottom: 16px;
 }
 
+#ipk h3 {
+  color: #003366;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 #home p {
   text-align: justify;
 }
@@ -227,11 +234,4 @@ footer {
     width: 100%;
   }
 }
-
-#ipk h3 {
-        color: #003366;
-        margin-top: 20px;
-        margin-bottom: 8px;
-    }
-
-  
+ 
