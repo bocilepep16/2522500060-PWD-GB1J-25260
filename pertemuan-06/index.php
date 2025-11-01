@@ -82,7 +82,7 @@
         </section>
          <section id="ipk">
             <?php
-            echo "<h2>Perhitungan Nilai Akhir, Grade, dan IPK</h2>";
+            echo "<h2>Nilai Saya</h2>";
 
             $namaMatkul1 = "Algoritma dan Struktur Data";
             $namaMatkul2 = "Agama";
