@@ -153,7 +153,7 @@
             $totalBobot += $bobot;
             $totalSKS += $sks;
             $i++;
-    }   
+        }   
         $IPK = $totalBobot / $totalSKS;
 
         echo "<p><strong>Total Bobot </strong>= $totalBobot</p>";
