@@ -15,4 +15,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>sesuaikan get ke post</li>
   <li>session_destroy</li>
   <li>isset</li>
+  <li>membuat file hancur.php dan menghancurkan form yang masih kosong</li>
   </ol>
