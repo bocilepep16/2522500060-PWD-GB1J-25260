@@ -16,4 +16,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>session_destroy</li>
   <li>isset</li>
   <li>membuat file hancur.php dan menghancurkan form yang masih kosong</li>
+  <li>Menambahkan section IPK dan mengerjakan sesuai panduan video TI1B</li>
   </ol>
