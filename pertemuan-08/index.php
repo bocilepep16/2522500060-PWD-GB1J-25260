@@ -38,6 +38,7 @@ endif;
         <li><a href="#home">Beranda</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
+        <li><a href="#biodata">Biodata</a></li>
       </ul>
     </nav>
   </header>
@@ -51,6 +52,54 @@ endif;
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
+
+    <section id="biodata">
+      <h2>Biodata Sederhana Mahasiswa</h2>
+      <form action="proses.php" method="POST">
+
+        <label for="txtNim"><span>Nim:</span>
+          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan Nim" required autocomplete="nim">
+        </label>
+
+        <label for="txtNama"><span>Nama Lengkap:</span>
+          <input type="Nama" id="txtNama" name="txtNama" placeholder="Masukkan Nama" required autocomplete="Nama">
+        </label>
+
+        <label for="txtTempat"><span>Tempat Lahir:</span>
+          <textarea id="txtTempat" name="txtTempat" rows="4" placeholder="Tulis tempat lahir anda..." required></textarea>
+        </label>
+
+         <label for="txtTanggal"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan Tanggal Lahir Anda" required autocomplete="tanggal lahir">
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="Hobi" id="txtHobi" name="txtHobi" placeholder="Masukkan Hobi Anda" required autocomplete="Nama">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <textarea id="txtPasangan" name="txtPasangan" rows="4" placeholder="Tulis pasangan anda" required></textarea>
+        </label>
+
+         <label for="txtPekerjaan"><span>Pekerjaan:</span>
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" required autocomplete="pekerjaan">
+        </label>
+
+        <label for="txtNamaOrtu"><span>Nama Orang Tua:</span>
+          <input type="Nama" id="txtOrtu" name="txtOrtu" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama Orang Tua">
+        </label>
+
+        <label for="txtKakak"><span>Nama kakak:</span>
+          <textarea id="txtkakak" name="txtkakak" rows="4" placeholder="Tulis Nama Kakak" required></textarea>
+        </label>
+
+         <label for="txtAdik"><span>Nama kakak:</span>
+          <textarea id="txtadik" name="txtadik" rows="4" placeholder="Tulis Nama Adik" required></textarea>
+        </label>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
 
     <section id="about">
       <?php
