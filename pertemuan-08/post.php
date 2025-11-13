@@ -1,3 +1,20 @@
+<?php
+session_start();
+$_SESSION ["nim"] = $_POST["txtNim"];
+$_SESSION["nama"] = $_POST["txtNama"];
+$_SESSION["tempat"] = $_POST["txtTempat"];
+$_SESSION["tanggal"] = $_POST["txtTanggal"];
+$_SESSION["hobi"] = $_POST["txtHobi"];
+$_SESSION["pasangan"] =  $_POST["txtPasangan"];
+$_SESSION["pekerjaan"] = $_POST["txtPekerjaan"];
+$_SESSION["namaortu"] = $_POST["txtNamaOrtu"];
+$_SESSION["kakak"] = $_POST["txtKakak"];
+$_SESSION["adik"] = $_POST["txtPesan"];
+
+echo $_SESSION["nim"] . $_SESSION["nama"] . $_SESSION["tempat"]; . $_SESSION["tanggal"] . $_SESSION["hobi"] . $_SESSION["pasangan"]; . $_SESSION["pekerjaan"] . $_SESSION["namaortu"] . $_SESSION["kakak"]; . $_SESSION["adik"];
+header("location: post.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
