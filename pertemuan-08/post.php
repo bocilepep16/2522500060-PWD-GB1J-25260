@@ -1,23 +1,23 @@
 <?php
-session_start();
+  session_start();
+  $sesname = "";
+  if (isset($_SESSION["nama"])):
+      $sesname = $_SESSION["nama"];
+  endif;
 
-$sesnama = "";
-if (isset($_SESSION["sesnama"])):
-  $sesnama = $_SESSION["sesnama"];
-endif;
+  $sesemail = "";
+  if (isset($_SESSION["email"])):
+    $sesemail = $_SESSION["email"];
+  endif;
 
-$sesemail = "";
-if (isset($_SESSION["sesemail"])):
-  $sesemail = $_SESSION["sesemail"];
-endif;
+  $sespesan = "";
+  if (isset($_SESSION["pesan"])):
+    $sespesan = $_SESSION["pesan"];
+  endif;
 
-$sespesan = "";
-if (isset($_SESSION["sespesan"])):
-  $sespesan = $_SESSION["sespesan"];
-endif;
-?>
+  ?>
 
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>

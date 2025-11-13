@@ -11,4 +11,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>membuat section biodata</li>
   <li>Copy section Contact diaatas section about kemudian ganti isi section contact agar sesuai soal</li>
   <li>Styling section #biodata agar sama dengan section Contact</li>
+  <li>membuat file post php dan copy paste isi index php</li>
 </ol>
