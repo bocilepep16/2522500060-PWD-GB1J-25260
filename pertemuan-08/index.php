@@ -1,3 +1,20 @@
+<?php
+session_start();
+$_SESSION ["nim"] = $_POST["txtNim"];
+$_SESSION["nama"] = $_POST["txtNama"];
+$_SESSION["tempat"] = $_POST["txtTempat"];
+$_SESSION["tanggal"] = $_POST["txtTanggal"];
+$_SESSION["hobi"] = $_POST["txtHobi"];
+$_SESSION["pasangan"] =  $_POST["txtPasangan"];
+$_SESSION["pekerjaan"] = $_POST["txtPekerjaan"];
+$_SESSION["namaortu"] = $_POST["txtNamaOrtu"];
+$_SESSION["kakak"] = $_POST["txtKakak"];
+$_SESSION["adik"] = $_POST["txtPesan"];
+
+echo $_SESSION["nim"] . $_SESSION["nama"] . $_SESSION["tempat"]; echo $_SESSION["tanggal"] . $_SESSION["hobi"] . $_SESSION["pasangan"]; echo $_SESSION["pekerjaan"] . $_SESSION["namaortu"] . $_SESSION["kakak"]; . $_SESSION["adik"];
+header("location: post.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,34 +98,19 @@
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-
+      
     <section id="about">
-      <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
-      ?>
-      <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
-      </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
+     <h2>Tentang Saya</h2>
+      <p><strong>NIM:</strong></p>
+      <p><strong>Nama Lengkap:</strong></p>
+      <p><strong>Tempat Lahir:</strong></p>
+      <p><strong>Tanggal Lahir:</strong> </p>
+      <p><strong>Hobi:</strong> </p>
+      <p><strong>Pasangan:</strong></p>
+      <p><strong>Pekerjaan:</strong></p>
+      <p><strong>Nama Orang Tua:</strong> </p>
+      <p><strong>Nama Kakak:</strong> </p>
+      <p><strong>Nama Adik:</strong> </p>
     </section>
 
     <section id="contact">
