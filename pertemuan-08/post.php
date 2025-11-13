@@ -91,7 +91,7 @@ header("location: post.php");
           <textarea id="txtkakak" name="txtkakak" placeholder="Tulis Nama Kakak" required></textarea>
         </label>
 
-         <label for="txtAdik"><span>Nama kakak:</span>
+         <label for="txtAdik"><span>Nama Adik:</span>
           <textarea id="txtadik" name="txtadik" placeholder="Tulis Nama Adik" required></textarea>
         </label>
 

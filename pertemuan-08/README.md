@@ -14,4 +14,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>membuat file post php dan copy paste isi index php</li>
   <li>merevisi index.php dan post php</li>
   <li>mengisi session di proses.php</li>
+  <li>merevisi kata yang salah pada section biodata</li>
 </ol>
