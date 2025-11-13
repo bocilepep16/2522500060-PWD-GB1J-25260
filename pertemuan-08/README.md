@@ -10,4 +10,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>mendownload file bahan uts dari e-learning kemudian di copy ke pertemuan 08, kemudian di exctract file </li>
   <li>membuat section biodata</li>
   <li>Copy section Contact diaatas section about kemudian ganti isi section contact agar sesuai soal</li>
+  <li>Styling section #biodata agar sama dengan section Contact</li>
 </ol>
