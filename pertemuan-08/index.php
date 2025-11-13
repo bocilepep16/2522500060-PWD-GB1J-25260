@@ -1,3 +1,18 @@
+<?php
+session_start();
+$sesemail = $_SESSION["txtEmail"] ?? "";
+$sespesan = $_SESSION["txtPesan"] ?? "";
+$sesnim = $_SESSION["sesnim"] ?? "";
+$sesnama = $_SESSION["txtnamalengkap"] ?? "";  
+$sestempatlahir = $_SESSION["txttempatlahir"] ?? "";
+$sestanggallahir = $_SESSION["txttanggallahir"] ?? "";
+$seshobi = $_SESSION["txthobi"] ?? "";
+$sespasangan = $_SESSION["txtpasangan"] ?? "";
+$sespekerjaan = $_SESSION["txtpekerjaan"] ?? "";
+$sesnamaortu = $_SESSION["txtnamaortu"] ?? "";
+$sesnamakakak = $_SESSION["txtnamakakak"] ?? "";
+$sesnamaadik = $_SESSION["txtnamaadik"] ?? "";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,18 +98,20 @@
       </form>
       
     <section id="about">
+      <?php
+          $nim = "2522500060;";
+          $Nama_Lengkap = "Catherine Audreylia Diony;";
+          $Tempat_Lahir = "Pangkalpinang";
+          $Tanggal_Lahir = "30 Juni 2007";
+          $hobi = "Memasak";
+          $Pasangan = "tidak ada";
+          $Pekerjaan = "mahasiswa";
+          $Nama_orang_tua ="Bocil";
+          $Nama_kakak = "Epep";
+          $Nama_adik = "ratu";
+      ?>
      <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong></p>
-      <p><strong>Nama Lengkap:</strong></p>
-      <p><strong>Tempat Lahir:</strong></p>
-      <p><strong>Tanggal Lahir:</strong> </p>
-      <p><strong>Hobi:</strong> </p>
-      <p><strong>Pasangan:</strong></p>
-      <p><strong>Pekerjaan:</strong></p>
-      <p><strong>Nama Orang Tua:</strong> </p>
-      <p><strong>Nama Kakak:</strong> </p>
-      <p><strong>Nama Adik:</strong> </p>
-    </section>
+      
 
     <section id="contact">
       <h2>Kontak Kami</h2>

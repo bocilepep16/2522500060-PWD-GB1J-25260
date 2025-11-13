@@ -101,7 +101,7 @@ header("location: post.php");
 
     <section id="about">
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong></p>
+      <p><strong>NIM:</strong> </p>
       <p><strong>Nama Lengkap:</strong> </p>
       <p><strong>Tempat Lahir:</strong> </p>
       <p><strong>Tanggal Lahir:</strong> </p>
