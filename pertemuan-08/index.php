@@ -2,17 +2,18 @@
 session_start();
 $sesemail = $_SESSION["txtEmail"] ?? "";
 $sespesan = $_SESSION["txtPesan"] ?? "";
-$sesnim = $_SESSION["sesnim"] ?? "";
-$sesnama = $_SESSION["txtnamalengkap"] ?? "";  
-$sestempatlahir = $_SESSION["txttempatlahir"] ?? "";
-$sestanggallahir = $_SESSION["txttanggallahir"] ?? "";
-$seshobi = $_SESSION["txthobi"] ?? "";
-$sespasangan = $_SESSION["txtpasangan"] ?? "";
-$sespekerjaan = $_SESSION["txtpekerjaan"] ?? "";
-$sesnamaortu = $_SESSION["txtnamaortu"] ?? "";
-$sesnamakakak = $_SESSION["txtnamakakak"] ?? "";
-$sesnamaadik = $_SESSION["txtnamaadik"] ?? "";
+$sesnim = $_SESSION["txtNim"] ?? "";
+$sesnama = $_SESSION["txtNama"] ?? "";  
+$sestempat = $_SESSION["txtTempat"] ?? "";
+$sestanggal = $_SESSION["txtTanggal"] ?? "";
+$seshobi = $_SESSION["txtHobi"] ?? "";
+$sespasangan = $_SESSION["txtPasangan"] ?? "";
+$sespekerjaan = $_SESSION["txtPekerjaan"] ?? "";
+$sesortu = $_SESSION["txtOrtu"] ?? "";
+$seskakak = $_SESSION["txtKakak"] ?? "";
+$sesadik = $_SESSION["txtAdik"] ?? "";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,11 +87,11 @@ $sesnamaadik = $_SESSION["txtnamaadik"] ?? "";
         </label>
 
         <label for="txtKakak"><span>Nama kakak:</span>
-          <textarea id="txtkakak" name="txtkakak" placeholder="Tulis Nama Kakak" required></textarea>
+          <textarea id="txtkakak" name="txtKakak" placeholder="Tulis Nama Kakak" required></textarea>
         </label>
 
          <label for="txtAdik"><span>Nama Adik:</span>
-          <textarea id="txtadik" name="txtadik" placeholder="Tulis Nama Adik" required></textarea>
+          <textarea id="txtadik" name="txtAdik" placeholder="Tulis Nama Adik" required></textarea>
         </label>
 
         <button type="submit">Kirim</button>
@@ -113,14 +114,14 @@ $sesnamaadik = $_SESSION["txtnamaadik"] ?? "";
      <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong><?php echo $sesnim?></p>
       <p><strong>Nama Lengkap:</strong><?php echo $sesnama?></p>
-      <p><strong>Tempat Lahir:</strong><?php echo $sestempatlahir?></p>
-      <p><strong>Tanggal Lahir:</strong><?php echo $sestanggallahir?> </p>
+      <p><strong>Tempat Lahir:</strong><?php echo $sestempat?></p>
+      <p><strong>Tanggal Lahir:</strong><?php echo $sestanggal?> </p>
       <p><strong>Hobi:</strong><?php echo $seshobi?> </p>
       <p><strong>Pasangan:</strong> <?php echo $sespasangan ?></p>
       <p><strong>Pekerjaan:</strong><?php echo $sespekerjaan?></p>
-      <p><strong>Nama Orang Tua:</strong> <?php echo $sesnamaortu?></p>
-      <p><strong>Nama Kakak:</strong> <?php echo $sesnamakakak?></p>
-      <p><strong>Nama Adik:</strong> <?php echo $sesnamaadik?></p>
+      <p><strong>Nama Orang Tua:</strong> <?php echo $sesortu?></p>
+      <p><strong>Nama Kakak:</strong> <?php echo $seskakak?></p>
+      <p><strong>Nama Adik:</strong> <?php echo $sesadik?></p>
     </section>
 
 

@@ -1,15 +1,15 @@
 <?php
 session_start();
-$_SESSION ["nim"] = $_POST["txtNim"];
+$_SESSION["nim"] = $_POST["txtNim"];
 $_SESSION["nama"] = $_POST["txtNama"];
 $_SESSION["tempat"] = $_POST["txtTempat"];
 $_SESSION["tanggal"] = $_POST["txtTanggal"];
 $_SESSION["hobi"] = $_POST["txtHobi"];
 $_SESSION["pasangan"] =  $_POST["txtPasangan"];
 $_SESSION["pekerjaan"] = $_POST["txtPekerjaan"];
-$_SESSION["namaortu"] = $_POST["txtNamaOrtu"];
+$_SESSION["namaortu"] = $_POST["txtOrtu"];
 $_SESSION["kakak"] = $_POST["txtKakak"];
-$_SESSION["adik"] = $_POST["txtPesan"];
+$_SESSION["adik"] = $_POST["txtAdik"];
 
 echo $_SESSION["nim"] . $_SESSION["nama"] . $_SESSION["tempat"]; . $_SESSION["tanggal"] . $_SESSION["hobi"] . $_SESSION["pasangan"]; . $_SESSION["pekerjaan"] . $_SESSION["namaortu"] . $_SESSION["kakak"]; . $_SESSION["adik"];
 header("location: post.php");
@@ -88,11 +88,11 @@ header("location: post.php");
         </label>
 
         <label for="txtKakak"><span>Nama kakak:</span>
-          <textarea id="txtkakak" name="txtkakak" placeholder="Tulis Nama Kakak" required></textarea>
+          <textarea id="txtkakak" name="txtKakak" placeholder="Tulis Nama Kakak" required></textarea>
         </label>
 
          <label for="txtAdik"><span>Nama Adik:</span>
-          <textarea id="txtadik" name="txtadik" placeholder="Tulis Nama Adik" required></textarea>
+          <textarea id="txtadik" name="txtAdik" placeholder="Tulis Nama Adik" required></textarea>
         </label>
 
         <button type="submit">Kirim</button>
@@ -101,16 +101,16 @@ header("location: post.php");
 
     <section id="about">
       <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong> </p>
-      <p><strong>Nama Lengkap:</strong> </p>
-      <p><strong>Tempat Lahir:</strong> </p>
-      <p><strong>Tanggal Lahir:</strong> </p>
-      <p><strong>Hobi:</strong> </p>
-      <p><strong>Pasangan:</strong> </p>
-      <p><strong>Pekerjaan:</strong> </p>
-      <p><strong>Nama Orang Tua:</strong> </p>
-      <p><strong>Nama Kakak:</strong> </p>
-      <p><strong>Nama Adik:</strong> </p>
+      <p><strong>NIM:</strong><?php echo $sesnim?></p>
+      <p><strong>Nama Lengkap:</strong><?php echo $sesnama?> </p>
+      <p><strong>Tempat Lahir:</strong><?php echo $sestempat?> </p>
+      <p><strong>Tanggal Lahir:</strong><?php echo $sestanggal?>  </p>
+      <p><strong>Hobi:</strong><?php echo $seshobi?> </p>
+      <p><strong>Pasangan:</strong><?php echo $sespasangan ?> </p>
+      <p><strong>Pekerjaan:</strong><?php echo $sespekerjaan?> </p>
+      <p><strong>Nama Orang Tua:</strong><?php echo $sesortu?> </p>
+      <p><strong>Nama Kakak:</strong> <?php echo $seskakak?> </p>
+      <p><strong>Nama Adik:</strong> <?php echo $sesadik?></p>
     </section>
 
     <section id="contact">
