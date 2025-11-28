@@ -18,4 +18,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>download dan extract file bahan pertemuan-09 di e-learning</li>
   <li>Modif baris kode (10-19) di proses.php menjadi bentuk array associative</li>
   <li>Menghapus Baris 23-32 pada proses.php</li>
+  <li>Menghapus Baris 19-67 pada index.php</li>
 </ol>
