@@ -20,4 +20,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>Menghapus Baris 23-32 pada proses.php</li>
   <li>Menghapus Baris 19-67 pada index.php</li>
   <li>Menambahkan baris kode baru setelah baris <h2>Tentang Saya</h2> untuk menampilkan array menggunakan looping foreach</li>
+  <li>Menghapus Baris 130-140 pada index.php</li>
 </ol>
