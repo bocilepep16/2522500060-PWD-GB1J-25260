@@ -15,4 +15,6 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
+  <li>download dan extract file bahan pertemuan-09 di e-learning</li>
+  <li>Modif baris kode (10-19) di proses.php menjadi bentuk array associative</li>
 </ol>
