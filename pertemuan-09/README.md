@@ -24,4 +24,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>Membuat File fungsi.php dan menambahkan kode</li>
   <li>Menambahkan kode pada fungsi.php untuk menghasilkan tanggal dalam format 2 digit tanggal, 3 digit nama bulan, dan 4 digit tahun</li>
   <li>Menambahkan kode pada fungsi.php untuk merender hasil atau output biodata</li>
+  <li>Menghapus baris 123-129 pada index.php dan menambahkan kode</li>
 </ol>
