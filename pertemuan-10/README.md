@@ -13,5 +13,6 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>membuat file baru dengan nama read.php dan menambahkan kode</li>
   <li>melakukan pengisian data atau record untuk tabel tbl_tamu sebanyak 3 record</li>
   <li>membuat file baru dengan nama read.inc.php dan memodif kode</li>
-  <li>mengganti kode baris ke 146 pada file index.php</liS>
+  <li>mengganti kode baris ke 146 pada file index.php</li>
+  <li>menghapus kode baris ke 133-141 pada file index.php</li>
 </ol>
