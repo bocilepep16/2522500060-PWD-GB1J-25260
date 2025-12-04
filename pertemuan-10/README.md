@@ -15,4 +15,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>membuat file baru dengan nama read.inc.php dan memodif kode</li>
   <li>mengganti kode baris ke 146 pada file index.php</li>
   <li>menghapus kode baris ke 133-141 pada file index.php</li>
+  <li>mengexport database db_pwd2025 dan memindahkan ke pertemuan 10</li>
 </ol>
