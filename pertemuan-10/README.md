@@ -10,4 +10,5 @@ Hari Ini, Kamis 6 November 2025, Saya Mempelajari:
   <li>mendownload PHPMyAdmin sesuai petunjuk</li>
   <li>membuat database dengan nama db_pwd2025 di PHPMyAdmin</li>
   <li>membuat tabel tbl_tamu yang akan menyimpan data dari form contact di PHPMyAdmin</li>
+  <li>membuat file baru dengan nama read.php dan menambahkan kode</li>
 </ol>
