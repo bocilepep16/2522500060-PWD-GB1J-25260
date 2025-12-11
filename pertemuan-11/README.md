@@ -14,5 +14,5 @@ Hari Ini, Kamis 12 Desember 2025, Saya Mempelajari:
   <li>menambahkan kode untuk mengambil data $_POST, trim, htmlspecialchars pada file proses.php</li>
   <li>menambahkan kode untuk memvalidasi (tidak boleh kosong, email valid) pada file proses.php</li>
   <li>menambahkan kode pada proses.php untuk simpan pesan sukses/gagal ke $_SESSION serta redirect balik ke index.php#contact</li>
-  <li>menambahkan kode pada proses.php yang menyambungkan ke file fungsi.php dan koneksi.php agar tampilan simpan pesan sukses/gagal muncul</li>
+  <li>menambahkan kode pada proses.php yang menyambungkan ke file fungsi.php dan koneksi.php agar muncul tampilan simpan pesan sukses/gagal muncul</li>
 </ol>
