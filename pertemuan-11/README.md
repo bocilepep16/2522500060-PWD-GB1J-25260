@@ -10,4 +10,5 @@ Hari Ini, Kamis 12 Desember 2025, Saya Mempelajari:
   <li>menambahkan kode penangkap pesan sukses/gagal pada file index.php</li>
   <li>menambahkan kode untuk menampilkan flash message pada file index.php</li>
   <li>menambahkan kode untuk menampilkan nilai lama dari form untuk antisipasi jika error pada file index.php</li>
+  <li>menambahkan kode untuk mengecek REQUEST_METHOD apakah menggunakan POST pada file proses.php</li>
 </ol>

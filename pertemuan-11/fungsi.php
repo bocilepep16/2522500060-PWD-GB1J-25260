@@ -6,8 +6,6 @@ function redirect_ke($url)
     exit();
 }
 
-
-<?php
 function bersihkan($str)
 {
   return htmlspecialchars(trim($str));
