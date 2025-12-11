@@ -6,4 +6,5 @@ Nama : Catherine Audreylia Diony <br>
 Hari Ini, Kamis 12 Desember 2025, Saya Mempelajari: 
 <ol>
   <li>Copy isi file folder pertemuan 10 ke pertemuan 11</li>
+  <li>Update fungsi.php untuk helper redirect sederhana (pola PRG) </li>
 </ol>
