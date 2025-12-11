@@ -9,4 +9,5 @@ Hari Ini, Kamis 12 Desember 2025, Saya Mempelajari:
   <li>Update fungsi.php untuk helper redirect sederhana (pola PRG) </li>
   <li>menambahkan kode penangkap pesan sukses/gagal pada file index.php</li>
   <li>menambahkan kode untuk menampilkan flash message pada file index.php</li>
+  <li>menambahkan kode untuk menampilkan nilai lama dari form untuk antisipasi jika error pada file index.php</li>
 </ol>
