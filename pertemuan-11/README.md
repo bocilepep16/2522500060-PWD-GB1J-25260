@@ -20,4 +20,5 @@ Hari Ini, Kamis 12 Desember 2025, Saya Mempelajari:
   <li>menambahkan input captcha sederhana</li>
   <li>menambahkan field baru di table tbl_tamu</li>
   <li>menambahkan kolom created at setelah kolom pesan untuk menampilkan tanggal dan waktu dikirim</li>
+  <li>mengexport database db_pwd2025 dan memindahkan ke pertemuan 11</li>
 </ol>
