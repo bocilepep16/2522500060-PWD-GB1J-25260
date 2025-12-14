@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 14, 2025 at 08:55 AM
+-- Generation Time: Dec 14, 2025 at 09:13 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -42,10 +42,9 @@ CREATE TABLE `tbl_tamu` (
 --
 
 INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `created_at`) VALUES
-(1, 'Catherine Audreylia Diony', 'Cath@gmail.com', 'Catherine sudah semangat mengerjakan tugas latihan pwd.', '2025-12-13 16:04:03'),
-(2, 'Bocil epep', 'Epep123@gmail.com', 'Bocil epep sedang latihan phpmyadmin', '2025-12-13 16:04:03'),
-(3, 'bocil', '123@gmail.com', 'jalanan penuh hujan', '2025-12-13 16:38:29'),
-(4, 'booyah', 'booyah@gmail.com', 'catherine tidak suka bermain game', '2025-12-14 15:49:08');
+(1, 'Catherine Audreylia', 'Cath@gmail.com', 'Catherine sudah Selesai mengerjakan lat pwd', '2025-12-14 16:10:20'),
+(2, 'booyah', 'booyah@gmail.com', 'TerimaKasih', '2025-12-14 16:11:39'),
+(3, 'bocil', '123@gmail.com', 'hari ini hujan lebat', '2025-12-14 16:12:05');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +64,7 @@ ALTER TABLE `tbl_tamu`
 -- AUTO_INCREMENT for table `tbl_tamu`
 --
 ALTER TABLE `tbl_tamu`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
