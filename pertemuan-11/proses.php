@@ -18,6 +18,8 @@ $errors = []; #ini array untuk menampung semua error yang ada
 
 if ($nama === '') {
     $errors[] = 'Nama wajib diisi.';
+} elseif (strlen($nama) < 3) {
+    $errors[] = 'Nama minimal 3 karakter.';
 }
 
 if ($email === '') {
@@ -28,6 +30,19 @@ if ($email === '') {
 
 if ($pesan === '') {
     $errors[] = 'Pesan wajib diisi.';
+} elseif (strlen($pesan) < 10) {
+    $errors[] = 'Pesan minimal 10 karakter.';
+}
+
+$old = [];
+// Ambil nilai captcha
+$captcha = $_POST['captcha'] ?? '';
+$old['captcha'] = $captcha;
+
+if ($captcha === '') {
+    $errors[] = 'captcha wajib diisi.';
+} elseif ($captcha != 5) {
+    $errors[] = 'Captcha salah.';
 }
 
 /*

@@ -15,4 +15,9 @@ Hari Ini, Kamis 12 Desember 2025, Saya Mempelajari:
   <li>menambahkan kode untuk memvalidasi (tidak boleh kosong, email valid) pada file proses.php</li>
   <li>menambahkan kode pada proses.php untuk simpan pesan sukses/gagal ke $_SESSION serta redirect balik ke index.php#contact</li>
   <li>menambahkan kode pada proses.php yang menyambungkan ke file fungsi.php dan koneksi.php agar muncul tampilan simpan pesan sukses/gagal muncul</li>
+  <li>menambahkan No Kolom urut pada read.php</li>
+  <li>menambahkan Kode untuk memvalidasi panjang nama minimal 3 karakter dan pesan minimal 10 Karakter</li>
+  <li>menambahkan input captcha sederhana</li>
+  <li>menambahkan field baru di table tbl_tamu</li>
+  <li>menambahkan kolom created at setelah kolom pesan untuk menampilkan tanggal dan waktu dikirim</li>
 </ol>
