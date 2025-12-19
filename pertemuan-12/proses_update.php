@@ -9,7 +9,7 @@
       redirect_ke('read.php');
   }
 
-  #validasi cid wajib angka dan minimal 1
+  #validasi cid wajib angka dan > 0
   $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
       'options' => ['min_range' => 1]
   ]);
@@ -26,16 +26,16 @@
   $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
 
   #validasi sederhana
-  $errors = []; // array untuk menampung semua error
+  $errors = []; #ini array untuk menampung semua error yang ada
 
   if ($nama === '') {
-      $errors[] = 'Nama wajib diisi.';
+    $errors[] = 'Nama wajib diisi.';
   }
 
   if ($email === '') {
-      $errors[] = 'Email wajib diisi.';
+    $errors[] = 'Email wajib diisi.';
   } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $errors[] = 'Format e-mail tidak valid.';
+    $errors[] = 'Format e-mail tidak valid.';
   }
 
   if ($pesan === '') {
@@ -63,11 +63,11 @@
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
   if (!empty($errors)) {
-      $_SESSION['old'] = [
-          'nama'  => $nama,
-          'email' => $email,
-          'pesan' => $pesan
-      ];
+    $_SESSION['old'] = [
+      'nama'  => $nama,
+      'email' => $email,
+      'pesan' => $pesan
+    ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
     redirect_ke('edit.php?cid=' . (int)$cid);
