@@ -9,4 +9,5 @@ Hari Ini, Kamis 18 Desember 2025, Saya Mempelajari:
   <li>menambah tombol Edit di read.php</li>
   <li>menambahkan penampil flash sukses maupun flash error menggunakan session pada read.php</li>
   <li>Membuat file baru edit.php untuk menampilkan form dengan data lama</li>
+  <li>Membuat file baru proses_update.php untuk menyimpan perubahan menggunakan query UPDATE dan prepared statement</li>
 </ol>
