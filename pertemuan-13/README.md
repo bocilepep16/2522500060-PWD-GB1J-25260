@@ -11,4 +11,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>mengcopy file proses update php dan merename menjadi file proses delete php</li>
   <li>menghapus baris kode form yang ada pada proses_delete.php</li>
   <li>menambahkan parameter cid untuk link delete di read.php</li>
+  <li>memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
 </ol>
