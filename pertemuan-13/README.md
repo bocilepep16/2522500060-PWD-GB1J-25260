@@ -13,4 +13,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan parameter cid untuk link delete di read.php</li>
   <li>memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
   <li>menambah kode konfirmasi sebelum hapus di read.php</li>
+  <li>menambah kode konfirmasi nama sebelum hapus di read.php</li>
 </ol>
