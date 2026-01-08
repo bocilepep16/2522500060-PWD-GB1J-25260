@@ -9,3 +9,4 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menghapus database yang ada di phpmyadmin</li>
   <li>mengreplace all collate yang ada di file localhost</li>
   <li>mengcopy file proses update php dan merename menjadi file proses delete php</li>
+  <li>menghapus baris kode form yang ada pada proses_delete.php</li>
