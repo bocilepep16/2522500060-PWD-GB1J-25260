@@ -104,17 +104,17 @@ if (!empty($errors)) {
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
-  redirect_ke('index.php#contact');
+  redirect_ke('index.php#biodata');
 }
 
 #menyiapkan query INSERT dengan prepared statement
-$sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+$sql = "INSERT INTO mahasiswa (nim, nama_lengkap, tempat_lahir, tanggal_lahir, hobi, pasangan, pekerjaan, nama_orangtua, nama_kakak, 	nama_adik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
   #jika gagal prepare, kirim pesan error ke pengguna (tanpa detail sensitif)
   $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-  redirect_ke('index.php#contact');
+  redirect_ke('index.php#biodata');
 }
 #bind parameter dan eksekusi (s = string)
 mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);

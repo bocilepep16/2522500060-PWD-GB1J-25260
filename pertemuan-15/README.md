@@ -12,4 +12,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambah kode ambil dan bersihkan nilai dari form biodata mahasiswa diproses.php</li>
   <li>menambahkan kode validasi sederhana di proses.php</li>
   <li>menambahkan kode simpan nilai lama dan pesan error, lalu redirect (konsep PRG) kedalam file proses.php</li>
+  <li>menambahkan kode query insert table mahasiswa proses.php</li>
 </ol>
