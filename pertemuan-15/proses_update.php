@@ -100,15 +100,15 @@ if (mb_strlen($adik) < 5) {
   if (!empty($errors)) {
     $_SESSION['old'] = [
     'nim'  => $nim,
-    'nama' => $nama,
-    'tempat' => $tempat,
-    'tanggal' => $tanggal,
+    'nama_lengkap' => $nama,
+    'tempat_lahir' => $tempat,
+    'tanggal_lahir' => $tanggal,
     'hobi'  => $hobi,
     'pasangan' => $pasangan,
     'pekerjaan' => $pekerjaan,
-    'ortu' => $ortu,
-    'kakak'  => $kakak,
-    'adik' => $adik,
+    'nama_orangtua' => $ortu,
+    'nama_kakak'  => $kakak,
+    'nama_adik' => $adik,
     ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -129,8 +129,8 @@ if (mb_strlen($adik) < 5) {
     redirect_ke('edit.php?nim='. (int)$nim);
   }
 
-  #bind parameter dan eksekusi (s = string)
-mysqli_stmt_bind_param($stmt, "ssssssssss", $nim, $nama, $tempat, $tanggal, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
+  #bind parameter dan eksekusi (s = string, i = integer)
+  mysqli_stmt_bind_param($stmt, "isssssssss", $nim, $nama, $tempat, $tanggal, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     unset($_SESSION['old']);
@@ -142,15 +142,15 @@ mysqli_stmt_bind_param($stmt, "ssssssssss", $nim, $nama, $tempat, $tanggal, $hob
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
     $_SESSION['old'] = [
     'nim'  => $nim,
-    'nama' => $nama,
-    'tempat' => $tempat,
-    'tanggal' => $tanggal,
+    'nama_lengkap' => $nama,
+    'tempat_lahir' => $tempat,
+    'tanggal_lahir' => $tanggal,
     'hobi'  => $hobi,
     'pasangan' => $pasangan,
     'pekerjaan' => $pekerjaan,
-    'ortu' => $ortu,
-    'kakak'  => $kakak,
-    'adik' => $adik,
+    'nama_orangtua' => $ortu,
+    'nama_kakak'  => $kakak,
+    'nama_adik' => $adik,
     ];
     $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
     redirect_ke('edit.php?nim='. (int)$nim);
