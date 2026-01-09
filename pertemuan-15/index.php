@@ -51,7 +51,7 @@ require_once __DIR__ . '/fungsi.php';
           <?= $flash_error; ?>
         </div>
       <?php endif; ?>
-      
+
       <form action="proses.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>
@@ -70,7 +70,7 @@ require_once __DIR__ . '/fungsi.php';
         </label>
 
         <label for="txtTglLhr"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" required
+          <input type="date" id="txtTglLhr" name="txtTglLhr" placeholder="Masukkan Tanggal Lahir" required
            value="<?= isset($old['tanggal_lahir']) ? htmlspecialchars($old['tanggal_lahir']) : '' ?>">
         </label>
 

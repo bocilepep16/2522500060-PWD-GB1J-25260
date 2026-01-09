@@ -35,7 +35,6 @@
   <tr>
     <th>No</th>
     <th>Aksi</th>
-    <th>ID</th>
     <th>Nim</th>
     <th>Nama Lengkap</th>
     <th>Tempat Lahir</th>
@@ -52,10 +51,19 @@
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
+        <a href="edit.php?nim=<?= (int)$row['nim']; ?>">Edit</a>
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
       </td>
-     
+      <td><?= htmlspecialchars($row['nim']); ?></td>
+      <td><?= htmlspecialchars($row['nama_lengkap']); ?></td>
+      <td><?= htmlspecialchars($row['tempat_lahir']); ?></td>
+      <td><?= htmlspecialchars($row['tanggal_lahir']); ?></td>
+      <td><?= htmlspecialchars($row['hobi']); ?></td>
+      <td><?= htmlspecialchars($row['pasangan']); ?></td>
+      <td><?= htmlspecialchars($row['pekerjaan']); ?></td>
+      <td><?= htmlspecialchars($row['nama_orangtua']); ?></td>
+      <td><?= htmlspecialchars($row['nama_kakak']); ?></td>
+      <td><?= htmlspecialchars($row['nama_adik']); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>

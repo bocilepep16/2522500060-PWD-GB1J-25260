@@ -6,7 +6,7 @@ require_once __DIR__ . '/fungsi.php';
 #cek method form, hanya izinkan POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
-  redirect_ke('index.php#biodata');
+  redirect_ke('index.php#about');
 }
 
 #ambil dan bersihkan nilai dari form
@@ -103,7 +103,7 @@ if (!empty($errors)) {
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
-  redirect_ke('index.php#biodata');
+  redirect_ke('index.php#about');
 }
 
 #menyiapkan query INSERT dengan prepared statement
@@ -136,7 +136,7 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
     'adik' => $adik,
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
-  redirect_ke('index.php#biodata');
+  redirect_ke('index.php#about');
 }
 #tutup statement
 mysqli_stmt_close($stmt);
@@ -155,4 +155,4 @@ $arrBiodata = [
 ];
 $_SESSION["biodata"] = $arrBiodata;
 
-header("location: index.php#about");
+header("location: index.php#biodata");
