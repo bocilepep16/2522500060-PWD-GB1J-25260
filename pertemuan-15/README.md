@@ -20,4 +20,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode pada file proses.php agar form yang dikirim muncul pada read.php </li>
   <li>menambahkan kode validasi edit, nilai awal, dan nilai old input pada file edit.php</li>
   <li>menambahkan kode atribut biodata mahasiswa di edit.php</li>
+  <li>menambahkan kode validasi,konsep prg, query update, parameter, dan flash sukses/error di proses_update.php</li>
 </ol>

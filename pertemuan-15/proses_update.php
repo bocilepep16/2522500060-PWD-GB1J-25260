@@ -9,54 +9,89 @@
     redirect_ke('read.php');
   }
 
-  #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
+  #validasi nim wajib angka dan > 0
+  $nim = filter_input(INPUT_POST, 'nim', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
-  if (!$cid) {
-    $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+  if (!$nim) {
+    $_SESSION['flash_error'] = 'nim Tidak Valid.';
+    redirect_ke('edit.php?nim='. (int)$nim);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $nama  = bersihkan($_POST['txtNamaEd']  ?? '');
-  $email = bersihkan($_POST['txtEmailEd'] ?? '');
-  $pesan = bersihkan($_POST['txtPesanEd'] ?? '');
-  $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
+  $nim  = bersihkan($_POST['txtNim']  ?? '');
+  $nama = bersihkan($_POST['txtNmLengkap'] ?? '');
+  $tempat = bersihkan($_POST['txtT4Lhr'] ?? '');
+  $tanggal = bersihkan($_POST['txtTglLhr'] ?? '');
+  $hobi  = bersihkan($_POST['txtHobi']  ?? '');
+  $pasangan = bersihkan($_POST['txtPasangan'] ?? '');
+  $pekerjaan = bersihkan($_POST['txtKerja'] ?? '');
+  $ortu = bersihkan($_POST['txtNmOrtu'] ?? '');
+  $kakak = bersihkan($_POST['txtNmKakak'] ?? '');
+  $adik = bersihkan($_POST['txtNmAdik'] ?? '');
 
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
 
-  if ($nama === '') {
-    $errors[] = 'Nama wajib diisi.';
-  }
+  if ($nim === '') {
+  $errors[] = 'Nim wajib diisi.';
+}
+if ($nama === '') {
+  $errors[] = 'nama wajib diisi.';
+}
+if ($tempat === '') {
+  $errors[] = 'tempatlahir wajib diisi.';
+}
+if ($tanggal === '') {
+  $errors[] = 'tanggallahir wajib diisi.';
+}
+if ($hobi === '') {
+  $errors[] = 'hobi wajib diisi.';
+}
+if ($pasangan === '') {
+  $errors[] = 'Pasangan wajib diisi.';
+}
+if ($pekerjaan === '') {
+  $errors[] = 'pekerjaan wajib diisi.';
+}
+if ($ortu === '') {
+  $errors[] = 'nama ortu wajib diisi.';
+}
+if ($kakak === '') {
+  $errors[] = 'Nama kakak wajib diisi.';
+}
+if ($adik === '') {
+  $errors[] = 'nama adik wajib diisi.';
+}
 
-  if ($email === '') {
-    $errors[] = 'Email wajib diisi.';
-  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Format e-mail tidak valid.';
-  }
-
-  if ($pesan === '') {
-    $errors[] = 'Pesan wajib diisi.';
-  }
-
-  if ($captcha === '') {
-    $errors[] = 'Pertanyaan wajib diisi.';
-  }
-
-  if (mb_strlen($nama) < 3) {
-    $errors[] = 'Nama minimal 3 karakter.';
-  }
-
-  if (mb_strlen($pesan) < 10) {
-    $errors[] = 'Pesan minimal 10 karakter.';
-  }
-
-  if ($captcha!=="6") {
-    $errors[] = 'Jawaban '. $captcha.' captcha salah.';
-  }
+if (mb_strlen($nim) < 10) {
+  $errors[] = 'Nim minimal 10 karakter.';
+}
+if (mb_strlen($nama) > 25) {
+  $errors[] = 'nama maksimal 25 karakter.';
+}
+if (mb_strlen($tempat) < 10) {
+  $errors[] = 'tempat minimal 10 karakter.';
+}
+if (mb_strlen($hobi) < 5) {
+  $errors[] = 'hobi minimal 5 karakter.';
+}
+if (mb_strlen($pasangan) > 10) {
+  $errors[] = 'pasangan maksimal 10 karakter.';
+}
+if (mb_strlen($pekerjaan) < 5) {
+  $errors[] = 'pekerjaan minimal 5 karakter.';
+}
+if (mb_strlen($ortu) < 5) {
+  $errors[] = 'namaortu minimal 5 karakter.';
+}
+if (mb_strlen($kakak) < 5) {
+  $errors[] = 'Namakakak minimal 5 karakter.';
+}
+if (mb_strlen($adik) < 5) {
+  $errors[] = 'namaadik minimal 5 karakter.';
+}
 
   /*
   kondisi di bawah ini hanya dikerjakan jika ada error, 
@@ -64,31 +99,38 @@
   */
   if (!empty($errors)) {
     $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan
+    'nim'  => $nim,
+    'nama' => $nama,
+    'tempat' => $tempat,
+    'tanggal' => $tanggal,
+    'hobi'  => $hobi,
+    'pasangan' => $pasangan,
+    'pekerjaan' => $pekerjaan,
+    'ortu' => $ortu,
+    'kakak'  => $kakak,
+    'adik' => $adik,
     ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?nim='. (int)$nim);
   }
 
   /*
     Prepared statement untuk anti SQL injection.
     menyiapkan query UPDATE dengan prepared statement 
-    (WAJIB WHERE cid = ?)
+    (WAJIB WHERE nim = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cemail = ?, cpesan = ? 
-                                WHERE cid = ?");
+  $stmt = mysqli_prepare($conn, "UPDATE mahasiswa 
+                                SET nim = ?, nama_lengkap = ?, tempat_lahir = ?, tanggal_lahir = ?, hobi = ?, pasangan = ?, pekerjaan = ?, nama_orangtua = ?, nama_kakak = ?, nama_adik = ?
+                                WHERE nim = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?nim='. (int)$nim);
   }
 
-  #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
+  #bind parameter dan eksekusi (s = string)
+mysqli_stmt_bind_param($stmt, "ssssssssss", $nim, $nama, $tempat, $tanggal, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     unset($_SESSION['old']);
@@ -99,14 +141,21 @@
     redirect_ke('read.php'); #pola PRG: kembali ke data dan exit()
   } else { #jika gagal, simpan kembali old value dan tampilkan error umum
     $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan,
+    'nim'  => $nim,
+    'nama' => $nama,
+    'tempat' => $tempat,
+    'tanggal' => $tanggal,
+    'hobi'  => $hobi,
+    'pasangan' => $pasangan,
+    'pekerjaan' => $pekerjaan,
+    'ortu' => $ortu,
+    'kakak'  => $kakak,
+    'adik' => $adik,
     ];
     $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?nim='. (int)$nim);
   }
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('edit.php?cid='. (int)$cid);
+  redirect_ke('edit.php?nim='. (int)$nim);
