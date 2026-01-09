@@ -6,7 +6,7 @@ require_once __DIR__ . '/fungsi.php';
 #cek method form, hanya izinkan POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
-  redirect_ke('index.php#contact');
+  redirect_ke('index.php#biodata');
 }
 
 #ambil dan bersihkan nilai dari form
@@ -91,15 +91,15 @@ simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 if (!empty($errors)) {
   $_SESSION['old'] = [
     'nim'  => $nim,
-    'namalengkap' => $nama,
-    'tempatlahir' => $tempat,
-    'tanggallahir' => $tanggal,
+    'nama' => $nama,
+    'tempat' => $tempat,
+    'tanggal' => $tanggal,
     'hobi'  => $hobi,
     'pasangan' => $pasangan,
     'pekerjaan' => $pekerjaan,
-    'nama orangtua' => $ortu,
-    'nama kakak'  => $kakak,
-    'nama adik' => $adik,
+    'ortu' => $ortu,
+    'kakak'  => $kakak,
+    'adik' => $adik,
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
@@ -125,18 +125,18 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
 } else { #jika gagal, simpan kembali old value dan tampilkan error umum
   $_SESSION['old'] = [
     'nim'  => $nim,
-    'namalengkap' => $nama,
-    'tempatlahir' => $tempat,
-    'tanggallahir' => $tanggal,
+    'nama' => $nama,
+    'tempat' => $tempat,
+    'tanggal' => $tanggal,
     'hobi'  => $hobi,
     'pasangan' => $pasangan,
     'pekerjaan' => $pekerjaan,
-    'nama orangtua' => $ortu,
-    'nama kakak'  => $kakak,
-    'nama adik' => $adik,
+    'ortu' => $ortu,
+    'kakak'  => $kakak,
+    'adik' => $adik,
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
-  redirect_ke('index.php#about');
+  redirect_ke('index.php#biodata');
 }
 #tutup statement
 mysqli_stmt_close($stmt);

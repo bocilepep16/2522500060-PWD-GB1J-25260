@@ -3,7 +3,7 @@
   require 'koneksi.php';
   require 'fungsi.php';
 
-  $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
+  $sql = "SELECT * FROM mahasiswa ORDER BY nim DESC";
   $q = mysqli_query($conn, $sql);
   if (!$q) {
     die("Query error: " . mysqli_error($conn));
@@ -38,7 +38,7 @@
     <th>ID</th>
     <th>Nim</th>
     <th>Nama Lengkap</th>
-    <th>Tempat Lahit</th>
+    <th>Tempat Lahir</th>
     <th>Tanggal Lahir</th>
     <th>Hobi</th>
     <th>Pasangan</th>
@@ -55,7 +55,6 @@
         <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
       </td>
-      <td><?= $row['cid']; ?></td>
      
     </tr>
   <?php endwhile; ?>

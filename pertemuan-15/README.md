@@ -16,3 +16,4 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode parameter dan eksekusi biodata mahasiswa pada proses.php</li>
   <li>menambahkan kode value pada biodata mahasiswa pada index.php</li>
   <li>menambahkan kode flash sukses/flash gagal pada saat mengirim form </li>
+  <li>mengganti select from tabel tbl_tamu menjadi select table mahasiswa</li>
