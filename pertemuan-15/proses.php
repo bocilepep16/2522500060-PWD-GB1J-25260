@@ -10,23 +10,25 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 #ambil dan bersihkan nilai dari form
-$nama  = bersihkan($_POST['txtNama']  ?? '');
-$email = bersihkan($_POST['txtEmail'] ?? '');
-$pesan = bersihkan($_POST['txtPesan'] ?? '');
-$captcha = bersihkan($_POST['txtCaptcha'] ?? '');
+$nim  = bersihkan($_POST['txtNim']  ?? '');
+$nama = bersihkan($_POST['txtNmLengkap'] ?? '');
+$tempatlahir = bersihkan($_POST['txtT4Lhr'] ?? '');
+$tanggallahir = bersihkan($_POST['txtTglLhr'] ?? '');
+$hobi  = bersihkan($_POST['txtHobi']  ?? '');
+$pasangan = bersihkan($_POST['txtPasangan'] ?? '');
+$pekerjaan = bersihkan($_POST['txtKerja'] ?? '');
+$namaorangtua = bersihkan($_POST['txtNmOrtu'] ?? '');
+$namakakak = bersihkan($_POST['txtNmKakak'] ?? '');
+$namaadik = bersihkan($_POST['txtNmAdik'] ?? '');
+
 
 #Validasi sederhana
 $errors = []; #ini array untuk menampung semua error yang ada
 
 if ($nama === '') {
-  $errors[] = 'Nama wajib diisi.';
+  $errors[] = 'Nim wajib diisi.';
 }
 
-if ($email === '') {
-  $errors[] = 'Email wajib diisi.';
-} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  $errors[] = 'Format e-mail tidak valid.';
-}
 
 if ($pesan === '') {
   $errors[] = 'Pesan wajib diisi.';
