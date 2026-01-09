@@ -103,7 +103,7 @@ if (!empty($errors)) {
   ];
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
-  redirect_ke('index.php#about');
+  redirect_ke('index.php#biodata');
 }
 
 #menyiapkan query INSERT dengan prepared statement
@@ -136,7 +136,7 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
     'nama_adik' => $adik,
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
-  redirect_ke('index.php#about');
+  redirect_ke('index.php#biodata');
 }
 #tutup statement
 mysqli_stmt_close($stmt);
