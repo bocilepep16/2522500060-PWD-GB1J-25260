@@ -8,4 +8,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>download file bahan tryout uas dan extract all</li>
   <li>drop database diphpmyadmin dan input localhost file yang disediakan</li>
   <li>membuat tabel mahasiswa di phpmyadmin</li>
+  <li>membuat tabel biodata mahasiswa diread.php</li>
 </ol>

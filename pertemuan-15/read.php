@@ -36,10 +36,16 @@
     <th>No</th>
     <th>Aksi</th>
     <th>ID</th>
-    <th>Nama</th>
-    <th>Email</th>
-    <th>Pesan</th>
-    <th>Created At</th>
+    <th>Nim</th>
+    <th>Nama Lengkap</th>
+    <th>Tempat Lahit</th>
+    <th>Tanggal Lahir</th>
+    <th>Hobi</th>
+    <th>Pasangan</th>
+    <th>Pekerjaan</th>
+    <th>Nama Orangtua</th>
+    <th>Nama Kakak</th>
+    <th>Nama Adik</th>
   </tr>
   <?php $i = 1; ?>
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
