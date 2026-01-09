@@ -9,5 +9,6 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>drop database diphpmyadmin dan input localhost file yang disediakan</li>
   <li>membuat tabel mahasiswa di phpmyadmin</li>
   <li>membuat tabel biodata mahasiswa diread.php</li>
-  <li>menambah kode ambil dan bersihkan nilai dari form biodata mahasiswa diread.php</li>
+  <li>menambah kode ambil dan bersihkan nilai dari form biodata mahasiswa diproses.php</li>
+  <li>menambahkan kode validasi sederhana di proses.php</li>
 </ol>

@@ -12,42 +12,77 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 #ambil dan bersihkan nilai dari form
 $nim  = bersihkan($_POST['txtNim']  ?? '');
 $nama = bersihkan($_POST['txtNmLengkap'] ?? '');
-$tempatlahir = bersihkan($_POST['txtT4Lhr'] ?? '');
-$tanggallahir = bersihkan($_POST['txtTglLhr'] ?? '');
+$tempat = bersihkan($_POST['txtT4Lhr'] ?? '');
+$tanggal = bersihkan($_POST['txtTglLhr'] ?? '');
 $hobi  = bersihkan($_POST['txtHobi']  ?? '');
 $pasangan = bersihkan($_POST['txtPasangan'] ?? '');
 $pekerjaan = bersihkan($_POST['txtKerja'] ?? '');
-$namaorangtua = bersihkan($_POST['txtNmOrtu'] ?? '');
-$namakakak = bersihkan($_POST['txtNmKakak'] ?? '');
-$namaadik = bersihkan($_POST['txtNmAdik'] ?? '');
+$ortu = bersihkan($_POST['txtNmOrtu'] ?? '');
+$kakak = bersihkan($_POST['txtNmKakak'] ?? '');
+$adik = bersihkan($_POST['txtNmAdik'] ?? '');
 
 
 #Validasi sederhana
 $errors = []; #ini array untuk menampung semua error yang ada
 
-if ($nama === '') {
+if ($nim === '') {
   $errors[] = 'Nim wajib diisi.';
 }
-
-
-if ($pesan === '') {
-  $errors[] = 'Pesan wajib diisi.';
+if ($nama === '') {
+  $errors[] = 'nama wajib diisi.';
+}
+if ($tempat === '') {
+  $errors[] = 'tempatlahir wajib diisi.';
+}
+if ($tanggal === '') {
+  $errors[] = 'tanggallahir wajib diisi.';
+}
+if ($hobi === '') {
+  $errors[] = 'hobi wajib diisi.';
+}
+if ($pasangan === '') {
+  $errors[] = 'Pasangan wajib diisi.';
+}
+if ($pekerjaan === '') {
+  $errors[] = 'pekerjaan wajib diisi.';
+}
+if ($ortu === '') {
+  $errors[] = 'nama ortu wajib diisi.';
+}
+if ($kakak === '') {
+  $errors[] = 'Nama kakak wajib diisi.';
+}
+if ($adik === '') {
+  $errors[] = 'nama adik wajib diisi.';
 }
 
-if ($captcha === '') {
-  $errors[] = 'Pertanyaan wajib diisi.';
+if (mb_strlen($nim) < 10) {
+  $errors[] = 'Nim minimal 10 karakter.';
 }
-
-if (mb_strlen($nama) < 3) {
-  $errors[] = 'Nama minimal 3 karakter.';
+if (mb_strlen($nama) > 15) {
+  $errors[] = 'nama maksimal 15 karakter.';
 }
-
-if (mb_strlen($pesan) < 10) {
-  $errors[] = 'Pesan minimal 10 karakter.';
+if (mb_strlen($tempat) < 10) {
+  $errors[] = 'tempat minimal 10 karakter.';
 }
-
-if ($captcha!=="5") {
-  $errors[] = 'Jawaban '. $captcha.' captcha salah.';
+if (mb_strlen($hobi) < 5) {
+  $errors[] = 'hobi minimal 5 karakter.';
+}
+if (mb_strlen($pasangan) > 10) {
+  $errors[] = 'pasangan maksimal 10 karakter.';
+}
+if (mb_strlen($pekerjaan) < 5) {
+  $errors[] = 'pekerjaan minimal 5 karakter.';
+}
+if (mb_strlen($ortu) < 5) {
+  $errors[] = 'namaortu minimal 5 karakter.';
+}
+if (mb_strlen($kakak) < 5) {
+  $errors[] = 'Namakakak minimal 5 karakter.';
+}
+if (mb_strlen($adik) < 5) {
+  $errors[] = 'namaadik minimal 5 karakter.';
+}
 }
 
 /*
@@ -56,6 +91,14 @@ simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
 */
 if (!empty($errors)) {
   $_SESSION['old'] = [
+    'nama'  => $nama,
+    'email' => $email,
+    'pesan' => $pesan,
+    'captcha' => $captcha,
+    'nama'  => $nama,
+    'email' => $email,
+    'pesan' => $pesan,
+    'captcha' => $captcha,
     'nama'  => $nama,
     'email' => $email,
     'pesan' => $pesan,
