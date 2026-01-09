@@ -58,15 +58,15 @@
 
   #Nilai awal (prefill form)
   $nim  = $row['nim'] ?? '';
-  $nama = $row['nama'] ?? '';
-  $tempat = $row['tempat'] ?? '';
-  $tanggal  = $row['tanggal'] ?? '';
+  $nama = $row['nama_lengkap'] ?? '';
+  $tempat = $row['tempat_lahir'] ?? '';
+  $tanggal  = $row['tanggal_lahir'] ?? '';
   $hobi = $row['hobi'] ?? '';
   $pasangan = $row['pasangan'] ?? '';
   $pekerjaan  = $row['pekerjaan'] ?? '';
-  $ortu = $row['ortu'] ?? '';
-  $kakak = $row['kakak'] ?? '';
-  $adik  = $row['adik'] ?? '';
+  $ortu = $row['nama_orangtua'] ?? '';
+  $kakak = $row['nama_kakak'] ?? '';
+  $adik  = $row['nama_adik'] ?? '';
 
   #Ambil error dan nilai old input kalau ada
   $flash_error = $_SESSION['flash_error'] ?? '';
@@ -74,15 +74,15 @@
   unset($_SESSION['flash_error'], $_SESSION['old']);
   if (!empty($old)) {
     $nim  = $old['nim'] ?? $nim;
-    $nama = $old['nama'] ?? $nama;
-    $tempat = $old['tempat'] ?? $tempat;
-    $tanggal = $old['tanggal'] ?? $tanggal;
+    $nama = $old['nama_lengkap'] ?? $nama;
+    $tempat = $old['tempat_lahir'] ?? $tempat;
+    $tanggal = $old['tanggal_lahir'] ?? $tanggal;
     $hobi = $old['hobi'] ?? $hobi;
     $pasangan = $old['pasangan'] ?? $pasangan;
     $pekerjaan  = $old['pekerjaan'] ?? $pekerjaan;
-    $ortu = $old['ortu'] ?? $ortu;
-    $tempat = $kakak['kakak'] ?? $kakak;
-    $nim  = $adik['adik'] ?? $adik;
+    $ortu = $old['nama_orangtua'] ?? $ortu;
+    $tempat = $kakak['nama_kakak'] ?? $kakak;
+    $nim  = $adik['nama_adik'] ?? $adik;
   }
 ?>
 
@@ -120,30 +120,61 @@
         <?php endif; ?>
         <form action="proses_update.php" method="POST">
 
-          <input type="text" name="nim" value="<?= (int)$nim; ?>">
+        <input type="text" name="nim" value="<?= (int)$nim; ?>" readonly>
 
-          <label for="txtNama"><span>Nama:</span>
-            <input type="text" id="txtNama" name="txtNamaEd" 
-              placeholder="Masukkan nama" required autocomplete="name"
-              value="<?= !empty($nama) ? $nama : '' ?>">
-          </label>
+        <label for="txtNmLengkap"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNmLengkap" name="txtNmLengkap" 
+          placeholder="Masukkan Nama Lengkap" required
+           value="<?= !empty($nama) ? $nama : '' ?>">
+        </label>
 
-          <label for="txtEmail"><span>Email:</span>
-            <input type="email" id="txtEmail" name="txtEmailEd" 
-              placeholder="Masukkan email" required autocomplete="email"
-              value="<?= !empty($email) ? $email : '' ?>">
-          </label>
+        <label for="txtT4Lhr"><span>Tempat Lahir:</span>
+          <input type="text" id="txtT4Lhr" name="txtT4Lhr" 
+          placeholder="Masukkan Tempat Lahir" required
+          value="<?= !empty($tempat) ? $tempat : '' ?>">
+        </label>
 
-          <label for="txtPesan"><span>Pesan Anda:</span>
-            <textarea id="txtPesan" name="txtPesanEd" rows="4" 
-              placeholder="Tulis pesan anda..." 
-              required><?= !empty($pesan) ? $pesan : '' ?></textarea>
-          </label>
+        <label for="txtTglLhr"><span>Tanggal Lahir:</span>
+          <input type="date" id="txtTglLhr" name="txtTglLhr" 
+          placeholder="Masukkan Tanggal Lahir" required
+          value="<?= !empty($tanggal) ? $tanggal : '' ?>">
+        </label>
 
-          <label for="txtCaptcha"><span>Captcha 2 x 3 = ?</span>
-            <input type="number" id="txtCaptcha" name="txtCaptcha" 
-              placeholder="Jawab Pertanyaan..." required>
-          </label>
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="text" id="txtHobi" name="txtHobi" 
+          placeholder="Masukkan Hobi" required
+          value="<?= !empty($hobi) ? $hobi : '' ?>">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasangan" 
+          placeholder="Masukkan Pasangan" required
+          value="<?= !empty($pasangan) ? $pasangan : '' ?>">
+        </label>
+
+        <label for="txtKerja"><span>Pekerjaan:</span>
+          <input type="text" id="txtKerja" name="txtKerja" 
+          placeholder="Masukkan Pekerjaan" required
+          value="<?= !empty($pekerjaan) ? $pekerjaan : '' ?>">
+        </label>
+
+        <label for="txtNmOrtu"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtNmOrtu" name="txtNmOrtu" 
+          placeholder="Masukkan Nama Orang Tua" required
+          value="<?= !empty($ortu) ? $ortu : '' ?>">
+        </label>
+
+        <label for="txtNmKakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNmKakak" name="txtNmKakak" 
+          placeholder="Masukkan Nama Kakak" required
+          value="<?= !empty($kakak) ? $kakak : '' ?>">
+        </label>
+
+        <label for="txtNmAdik"><span>Nama Adik:</span>
+          <input type="text" id="txtNmAdik" name="txtNmAdik" 
+          placeholder="Masukkan Nama Adik" required
+           value="<?= !empty($adik) ? $adik : '' ?>">
+        </label>
 
           <button type="submit">Kirim</button>
           <button type="reset">Batal</button>
