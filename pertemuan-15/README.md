@@ -18,4 +18,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode flash sukses/flash gagal pada saat mengirim form </li>
   <li>mengganti select from tabel tbl_tamu menjadi select table mahasiswa</li>
   <li>menambahkan kode pada file proses.php agar form yang dikirim muncul pada read.php </li>
+  <li>menambahkan kode validasi edit, nilai awal, dan nilai old input pada file edit.php</li>
 </ol>
