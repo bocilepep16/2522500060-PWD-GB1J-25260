@@ -24,4 +24,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode validasi untuk menghapus data biodata mahasiswa pada file prose_delete.php</li>
   <li>menambahkan kode flash sukses/error form dikirim pada index.php yang kurang</li>
   <li>mengganti dan memperbaiki cid ke nim untuk mengonfirmasi nama yang akan dihapus</li>
+  <li>mengganti method get ke post</li>
 </ol>
