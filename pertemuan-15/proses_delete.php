@@ -3,8 +3,8 @@
   require __DIR__ . '/koneksi.php';
   require_once __DIR__ . '/fungsi.php';
 
-  #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_GET, 'nim', FILTER_VALIDATE_INT, [
+  #validasi nim wajib angka dan > 0
+  $nim = filter_input(INPUT_GET, 'nim', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
