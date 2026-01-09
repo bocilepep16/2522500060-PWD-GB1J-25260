@@ -59,8 +59,8 @@ if ($adik === '') {
 if (mb_strlen($nim) < 10) {
   $errors[] = 'Nim minimal 10 karakter.';
 }
-if (mb_strlen($nama) > 15) {
-  $errors[] = 'nama maksimal 15 karakter.';
+if (mb_strlen($nama) > 25) {
+  $errors[] = 'nama maksimal 25 karakter.';
 }
 if (mb_strlen($tempat) < 10) {
   $errors[] = 'tempat minimal 10 karakter.';
@@ -82,7 +82,6 @@ if (mb_strlen($kakak) < 5) {
 }
 if (mb_strlen($adik) < 5) {
   $errors[] = 'namaadik minimal 5 karakter.';
-}
 }
 
 /*
@@ -137,7 +136,7 @@ if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesa
     'nama adik' => $adik,
   ];
   $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
-  redirect_ke('index.php#biodata');
+  redirect_ke('index.php#about');
 }
 #tutup statement
 mysqli_stmt_close($stmt);

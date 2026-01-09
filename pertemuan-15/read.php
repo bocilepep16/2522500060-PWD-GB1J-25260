@@ -56,9 +56,7 @@
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
       </td>
       <td><?= $row['cid']; ?></td>
-      <td><?= htmlspecialchars($row['nim']); ?></td>
-      <td><?= htmlspecialchars($row['cemail']); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
+     
     </tr>
   <?php endwhile; ?>
 </table>
