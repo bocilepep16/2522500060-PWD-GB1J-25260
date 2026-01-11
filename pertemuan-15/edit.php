@@ -4,8 +4,8 @@
   require 'fungsi.php';
 
   /*
-    Ambil nilai nim dari GET dan lakukan validasi untuk 
-    mengecek cid harus angka dan lebih besar dari 0 (> 0).
+    Ambil nilai nim dari POST dan lakukan validasi untuk 
+    mengecek nim harus angka dan lebih besar dari 0 (> 0).
     'options' => ['min_range' => 1] artinya nim harus ≥ 1 
     (bukan 0, bahkan bukan negatif, bukan huruf, bukan HTML).
   */
@@ -14,7 +14,7 @@
   ]);
   /*
     Skrip di atas cara penulisan lamanya adalah:
-    $nim = $_GET['nim'] ?? '';
+    $nim = $_POST['nim'] ?? '';
     $nim = (int)$nim;
 
     Cara lama seperti di atas akan mengambil data mentah 
