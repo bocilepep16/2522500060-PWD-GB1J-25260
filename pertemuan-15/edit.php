@@ -81,8 +81,8 @@
     $pasangan = $old['pasangan'] ?? $pasangan;
     $pekerjaan  = $old['pekerjaan'] ?? $pekerjaan;
     $ortu = $old['nama_orangtua'] ?? $ortu;
-    $kakak = $kakak['nama_kakak'] ?? $kakak;
-    $adik  = $adik['nama_adik'] ?? $adik;
+    $kakak = $old['nama_kakak'] ?? $kakak;
+    $adik  = $old['nama_adik'] ?? $adik;
   }
 ?>
 
@@ -122,7 +122,8 @@
 
         <label for="txtNim"> <span>NIM:</span>
           <input type="text" id="txtNim" name="nim"
-          placeholder="NIM Otomatis" value="<?= !empty($nim) ? (int)$nim : '' ?>"
+          placeholder="NIM Otomatis" required
+          value="<?= !empty($nim) ? (int)$nim : '' ?>"
           readonly>
         </label>
 
