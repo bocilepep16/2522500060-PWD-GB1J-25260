@@ -5,8 +5,9 @@
 
   #cek method form, hanya izinkan POST
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    //exit('hai');
     $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    //redirect_ke('read.php');
   }
 
   #validasi nim wajib angka dan > 0
@@ -14,13 +15,15 @@
     'options' => ['min_range' => 1]
   ]);
 
+
+
   if (!$nim) {
     $_SESSION['flash_error'] = 'nim Tidak Valid.';
     redirect_ke('edit.php?nim='. (int)$nim);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $nim  = bersihkan($_POST['txtNim']  ?? '');
+  #$nim  = bersihkan($_POST['txtNim']  ?? '');
   $nama = bersihkan($_POST['txtNmLengkap'] ?? '');
   $tempat = bersihkan($_POST['txtT4Lhr'] ?? '');
   $tanggal = bersihkan($_POST['txtTglLhr'] ?? '');
@@ -34,9 +37,9 @@
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
 
-if ($nim === '') {
+/*  if ($nim === '') {
   $errors[] = 'Nim wajib diisi.';
-}
+}*/
 if ($nama === '') {
   $errors[] = 'nama wajib diisi.';
 }
@@ -65,6 +68,9 @@ if ($adik === '') {
   $errors[] = 'nama adik wajib diisi.';
 }
 
+/*if (mb_strlen($nim) < 10) {
+  $errors[] = 'Nim minimal 10 karakter.';
+}*/
 if (mb_strlen($nama) > 25) {
   $errors[] = 'nama maksimal 25 karakter.';
 }
@@ -89,6 +95,7 @@ if (mb_strlen($kakak) < 5) {
 if (mb_strlen($adik) < 5) {
   $errors[] = 'namaadik minimal 5 karakter.';
 }
+
 
   /*
   kondisi di bawah ini hanya dikerjakan jika ada error, 
@@ -127,7 +134,7 @@ if (mb_strlen($adik) < 5) {
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "isssssssss", $nim, $nama, $tempat, $tanggal, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik);
+  mysqli_stmt_bind_param($stmt, "sssssssssi", $nama, $tempat, $tanggal, $hobi, $pasangan, $pekerjaan, $ortu, $kakak, $adik, $nim);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     unset($_SESSION['old']);
@@ -156,3 +163,6 @@ if (mb_strlen($adik) < 5) {
   mysqli_stmt_close($stmt);
 
   redirect_ke('edit.php?nim='. (int)$nim);
+
+  echo $_SESSION['flash_sukses'];
+  echo $_SESSION['flash_error'];

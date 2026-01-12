@@ -81,8 +81,8 @@
     $pasangan = $old['pasangan'] ?? $pasangan;
     $pekerjaan  = $old['pekerjaan'] ?? $pekerjaan;
     $ortu = $old['nama_orangtua'] ?? $ortu;
-    $tempat = $kakak['nama_kakak'] ?? $kakak;
-    $nim  = $adik['nama_adik'] ?? $adik;
+    $kakak = $kakak['nama_kakak'] ?? $kakak;
+    $adik  = $adik['nama_adik'] ?? $adik;
   }
 ?>
 
@@ -120,7 +120,11 @@
         <?php endif; ?>
         <form action="proses_update.php" method="POST">
 
-        <input type="text" name="nim" value="<?= (int)$nim; ?>" readonly>
+        <label for="txtNim"> <span>NIM:</span>
+          <input type="text" id="txtNim" name="nim"
+          placeholder="NIM Otomatis" value="<?= !empty($nim) ? (int)$nim : '' ?>"
+          readonly>
+        </label>
 
         <label for="txtNmLengkap"><span>Nama Lengkap:</span>
           <input type="text" id="txtNmLengkap" name="txtNmLengkap" 
