@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 11, 2026 at 03:58 PM
+-- Generation Time: Jan 12, 2026 at 03:17 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -47,7 +47,7 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`nim`, `nama_lengkap`, `tempat_lahir`, `tanggal_lahir`, `hobi`, `pasangan`, `pekerjaan`, `nama_orangtua`, `nama_kakak`, `nama_adik`) VALUES
-('2522500060', 'catherine audreylia', 'pangkalpinang', '2026-01-21', 'Memasak', 'kucing', 'Mahasiswa', 'Budi Gunawan', 'Gunawan', 'Budi utama'),
+('2522500060', 'catherine audreylia', 'pangkalpinang', '2026-01-21', 'Memasak dan belajar', 'kucing', 'Mahasiswa', 'Budi Gunawan', 'Gunawan', 'Budi utama'),
 ('2522500068', 'christian ronaldo', 'pangkalpinang', '2026-01-01', 'sepeda', 'Tidak ada', 'pelajar', 'adi dan sukma', 'sulaiman', 'Budi utama');
 
 -- --------------------------------------------------------
