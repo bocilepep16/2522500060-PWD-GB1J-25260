@@ -9,7 +9,7 @@
     'options' => ['min_range' => 1] artinya nim harus ≥ 1 
     (bukan 0, bahkan bukan negatif, bukan huruf, bukan HTML).
   */
-  $nim = filter_input(INPUT_POST, 'nim', FILTER_VALIDATE_INT, [
+  $nim = filter_input(INPUT_GET, 'nim', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
   /*
