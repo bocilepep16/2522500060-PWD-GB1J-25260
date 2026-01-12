@@ -34,7 +34,7 @@
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
 
-  if ($nim === '') {
+if ($nim === '') {
   $errors[] = 'Nim wajib diisi.';
 }
 if ($nama === '') {
@@ -65,9 +65,6 @@ if ($adik === '') {
   $errors[] = 'nama adik wajib diisi.';
 }
 
-if (mb_strlen($nim) < 10) {
-  $errors[] = 'Nim minimal 10 karakter.';
-}
 if (mb_strlen($nama) > 25) {
   $errors[] = 'nama maksimal 25 karakter.';
 }
@@ -121,7 +118,7 @@ if (mb_strlen($adik) < 5) {
     (WAJIB WHERE nim = ?)
   */
   $stmt = mysqli_prepare($conn, "UPDATE mahasiswa 
-                                SET nim = ?, nama_lengkap = ?, tempat_lahir = ?, tanggal_lahir = ?, hobi = ?, pasangan = ?, pekerjaan = ?, nama_orangtua = ?, nama_kakak = ?, nama_adik = ?
+                                SET nama_lengkap = ?, tempat_lahir = ?, tanggal_lahir = ?, hobi = ?, pasangan = ?, pekerjaan = ?, nama_orangtua = ?, nama_kakak = ?, nama_adik = ?
                                 WHERE nim = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
