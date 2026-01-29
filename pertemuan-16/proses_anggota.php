@@ -108,6 +108,16 @@ if (!empty($errors)) {
   redirect_ke('index.php#anggota');
 }
 
+#menyiapkan query INSERT dengan prepared statement
+$sql = "INSERT INTO anggota (nomor_anggota, nama_anggota, jabatan_anggota, tanggal_jadi, kemampuan_anggota, gaji_anggota, nomor_wa, batalion_anggota, tinggi_badan, 	berat_badan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$stmt = mysqli_prepare($conn, $sql);
+
+if (!$stmt) {
+  #jika gagal prepare, kirim pesan error ke pengguna (tanpa detail sensitif)
+  $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
+  redirect_ke('index.php#anggota');
+}
+
 $arrAnggota = [
   "noang" => $_POST["txtNoAng"] ?? "",
   "nama" => $_POST["txtNmAng"] ?? "",
