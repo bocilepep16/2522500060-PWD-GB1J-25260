@@ -6,25 +6,30 @@
   #cek method form, hanya izinkan POST
   if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
+    #redirect_ke('read.php');
   }
 
   #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_POST, 'nomor_anggota', FILTER_VALIDATE_INT, [
+  $no = filter_input(INPUT_POST, 'nomor_anggota', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
-  if (!$cid) {
+  if (!$no) {
     $_SESSION['flash_error'] = 'Nomor Anggota Tidak Valid.';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?nomor_anggota='. (int)$no);
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $nama  = bersihkan($_POST['txtNamaEd']  ?? '');
-  $email = bersihkan($_POST['txtEmailEd'] ?? '');
-  $pesan = bersihkan($_POST['txtPesanEd'] ?? '');
-  $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
-
+  $no  = bersihkan($_POST['txtNoAng']  ?? '');
+  $nama = bersihkan($_POST['txtNmAng'] ?? '');
+  $jabatan = bersihkan($_POST['txtJabAng'] ?? '');
+  $tanggal = bersihkan($_POST['txtTglJadi'] ?? '');
+  $skill  = bersihkan($_POST['txtSkill']  ?? '');
+  $gaji = bersihkan($_POST['txtGaji'] ?? '');
+  $nowa = bersihkan($_POST['txtNoWA'] ?? '');
+  $batalion = bersihkan($_POST['txBatalion'] ?? '');
+  $bb = bersihkan($_POST['txtBB'] ?? '');
+  $tb = bersihkan($_POST['txtTB'] ?? '');
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
 
