@@ -123,15 +123,15 @@ if (mb_strlen($tb) > 3) {
   /*
     Prepared statement untuk anti SQL injection.
     menyiapkan query UPDATE dengan prepared statement 
-    (WAJIB WHERE cid = ?)
+    (WAJIB WHERE nomor_anggota = ?)
   */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cemail = ?, cpesan = ? 
-                                WHERE cid = ?");
+  $stmt = mysqli_prepare($conn, "UPDATE anggota 
+                                SET nama_anggota = ?, jabatan_anggota = ?, tanggal_jadi = ?, kemampuan_anggota = ?, gaji_anggota = ?, nomor_wa = ?, batalion_anggota = ?, tinggi_badan = ?, 	berat_badan = ?
+                                WHERE nomor_anggota = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?nomor_anggota='. (int)$no);
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)

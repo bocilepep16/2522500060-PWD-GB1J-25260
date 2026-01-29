@@ -23,4 +23,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode bersihkan form pada proses_update.php</li>
   <li>menmabhakan kode validasi sederhana pada file proses_update.php</li>
   <li>menmabahkan kode simpan nilai lama dan pesan error, lalu redirect (konsep PRG)</li>
+  <li>menambhakan kode  menyiapkan query UPDATE dengan prepared statement  pada proses_update.php</li>
 </ol>
