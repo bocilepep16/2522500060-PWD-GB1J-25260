@@ -7,4 +7,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
 <ol>
   <li>download file bahan uas dan extract all</li>
   <li>drop database diphpmyadmin dan input localhost file yang disediakan</li>
+  <li>membuat tabel anggota di phpmyadmin</li>
 </ol>
