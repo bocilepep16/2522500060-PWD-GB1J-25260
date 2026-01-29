@@ -3,7 +3,7 @@
   require 'koneksi.php';
   require 'fungsi.php';
 
-  $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
+  $sql = "SELECT * FROM anggota ORDER BY nomor_anggota DESC";
   $q = mysqli_query($conn, $sql);
   if (!$q) {
     die("Query error: " . mysqli_error($conn));
@@ -35,25 +35,35 @@
   <tr>
     <th>No</th>
     <th>Aksi</th>
-    <th>ID</th>
-    <th>Nama</th>
-    <th>Email</th>
-    <th>Pesan</th>
-    <th>Created At</th>
+    <th>Nomor Anggota</th>
+    <th>Nama Anggota</th>
+    <th>Jabatan Anggota</th>
+    <th>Tanggal Jadi Anggota</th>
+    <th>Kemampuan Anggota</th>
+    <th>Gaji Anggota</th>
+    <th>Nomor Wa</th>
+    <th>Batalion Anggota</th>
+    <th>Berat badan</th>
+    <th>Tinggi badan</th>
   </tr>
   <?php $i = 1; ?>
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+        <a href="edit.php?nomor_anggota=<?= (int)$row['nomor_anggota']; ?>">Edit</a>
+        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama_anggota']); ?>?')" href="proses_delete.php?nomor_anggota=<?= (int)$row['nomor_anggota']; ?>">Delete</a>
       </td>
-      <td><?= $row['cid']; ?></td>
-      <td><?= htmlspecialchars($row['cnama']); ?></td>
-      <td><?= htmlspecialchars($row['cemail']); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
-      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+      <td><?= htmlspecialchars($row['nomor_anggota']); ?></td>
+      <td><?= htmlspecialchars($row['nama_anggota']); ?></td>
+      <td><?= htmlspecialchars($row['jabatan_anggota']); ?></td>
+      <td><?= htmlspecialchars($row['tanggal_jadi']); ?></td>
+      <td><?= htmlspecialchars($row['kemampuan_anggota']); ?></td>
+      <td><?= htmlspecialchars($row['gaji_anggota']); ?></td>
+      <td><?= htmlspecialchars($row['nomor_wa']); ?></td>
+      <td><?= htmlspecialchars($row['batalion_anggota']); ?></td>
+      <td><?= htmlspecialchars($row['berat_badan']); ?></td>
+      <td><?= htmlspecialchars($row['tinggi_badan']); ?></td>
     </tr>
   <?php endwhile; ?>
 </table>
