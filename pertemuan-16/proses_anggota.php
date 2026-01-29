@@ -9,6 +9,18 @@ require_once __DIR__ . '/fungsi.php';
 	bedanya, kali ini diterapkan untuk anggota dosen bukan tamu
 */
 
+#ambil dan bersihkan nilai dari form
+$No  = bersihkan($_POST['txtNoAng']  ?? '');
+$nama = bersihkan($_POST['txtNmAng'] ?? '');
+$jabatan = bersihkan($_POST['txtJabAng'] ?? '');
+$tanggal = bersihkan($_POST['txtTglJadi'] ?? '');
+$skill  = bersihkan($_POST['txtSkill']  ?? '');
+$gaji = bersihkan($_POST['txtGaji'] ?? '');
+$nowa = bersihkan($_POST['txtNoWA'] ?? '');
+$batalion = bersihkan($_POST['txBatalion'] ?? '');
+$bb = bersihkan($_POST['txtBB'] ?? '');
+$tb = bersihkan($_POST['txtTB'] ?? '');
+
 $arrAnggota = [
   "noang" => $_POST["txtNoAng"] ?? "",
   "nama" => $_POST["txtNmAng"] ?? "",
