@@ -86,6 +86,28 @@ if (mb_strlen($tb) > 3) {
   $errors[] = 'tinggi badan maksimal 3 karakter.';
 }
 
+/*
+kondisi di bawah ini hanya dikerjakan jika ada error, 
+simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
+*/
+if (!empty($errors)) {
+  $_SESSION['old'] = [
+    'nomor_anggota'  => $no,
+    'nama_anggota' => $nama,
+    'jabatan_anggota' => $jabatan,
+    'tanggal_jadi' => $tanggal,
+    'kemampuan_anggota'  => $skill,
+    'gaji_anggota' => $gaji,
+    'nomor_wa' => $nowa,
+    'batalion_anggota' => $batalion,
+    'berat_badan'  => $bb,
+    'tinggi_badan' => $tb,
+  ];
+
+  $_SESSION['flash_error'] = implode('<br>', $errors);
+  redirect_ke('index.php#anggota');
+}
+
 $arrAnggota = [
   "noang" => $_POST["txtNoAng"] ?? "",
   "nama" => $_POST["txtNmAng"] ?? "",

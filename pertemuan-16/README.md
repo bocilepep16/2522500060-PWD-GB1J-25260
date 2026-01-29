@@ -13,4 +13,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>Menambahkan Validasi Sederhana Pada File Proses_anggota.php</li>
   <li>Menambahkan Validasi Sederhana Yang Kurang Pada File Proses_anggota.php</li>
   <li>Menambahkan Kode Method yang dizinkan hanya POST</li>
+  <li>menambahkan Kode simpan nilai lama dan pesan error, lalu redirect (konsep PRG)</li>
 </ol>
