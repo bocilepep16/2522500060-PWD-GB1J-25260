@@ -4,12 +4,12 @@
   require_once __DIR__ . '/fungsi.php';
 
   #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
+  $cid = filter_input(INPUT_GET, 'nomor_anggota', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
   if (!$cid) {
-    $_SESSION['flash_error'] = 'CID Tidak Valid.';
+    $_SESSION['flash_error'] = 'Nomor Anggota Tidak Valid.';
     redirect_ke('read.php');
   }
 
@@ -18,8 +18,8 @@
     menyiapkan query UPDATE dengan prepared statement 
     (WAJIB WHERE cid = ?)
   */
-  $stmt = mysqli_prepare($conn, "DELETE FROM tbl_tamu
-                                WHERE cid = ?");
+  $stmt = mysqli_prepare($conn, "DELETE FROM anggota
+                                WHERE nomor_anggota = ?");
   if (!$stmt) {
     #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
@@ -27,7 +27,7 @@
   }
 
   #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "i", $cid);
+  mysqli_stmt_bind_param($stmt, "i", $no);
 
   if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
     /*

@@ -19,4 +19,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode Value pada file read.php beserta dengan link edit dan delete</li>
   <li>menambahkan kode flash error/sukses pada file index.php</li>
   <li>menambahkan kode Values html yang kurang pada file index.php section anggota</li>
+  <li>menambahkan kode validasi delete pada file proses_delete.php</li>
 </ol>
