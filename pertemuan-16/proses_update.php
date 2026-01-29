@@ -10,12 +10,12 @@
   }
 
   #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
+  $cid = filter_input(INPUT_POST, 'nomor_anggota', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
 
   if (!$cid) {
-    $_SESSION['flash_error'] = 'CID Tidak Valid.';
+    $_SESSION['flash_error'] = 'Nomor Anggota Tidak Valid.';
     redirect_ke('edit.php?cid='. (int)$cid);
   }
 
@@ -109,4 +109,4 @@
   #tutup statement
   mysqli_stmt_close($stmt);
 
-  redirect_ke('edit.php?cid='. (int)$cid);
+  redirect_ke('edit.php?nomor_anggota='. (int)$nomor_anggota);

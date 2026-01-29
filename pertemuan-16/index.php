@@ -65,42 +65,52 @@ require_once __DIR__ . '/fungsi.php';
 
         <label for="txtNoAng"><span>Nomor Anggota:</span>
           <input type="text" id="txtNoAng" name="txtNoAng" placeholder="Masukkan Nomor Anggota" required>
+          value="<?= isset($old['nomor_anggota']) ? htmlspecialchars($old['nomor_anggota']) : '' ?>">
         </label>
 
         <label for="txtNmAng"><span>Nama Anggota:</span>
           <input type="text" id="txtNmAng" name="txtNmAng" placeholder="Masukkan Nama Anggota" required>
+          value="<?= isset($old['nama_anggota']) ? htmlspecialchars($old['nama_anggota']) : '' ?>">
         </label>
 
         <label for="txtJabAng"><span>Jabatan Anggota:</span>
           <input type="text" id="txtJabAng" name="txtJabAng" placeholder="Masukkan Jabatan Anggota" required>
+          value="<?= isset($old['jabatan_anggota']) ? htmlspecialchars($old['jabatan_anggota']) : '' ?>">
         </label>
 
         <label for="txtTglJadi"><span>Tanggal Jadi Anggota:</span>
           <input type="text" id="txtTglJadi" name="txtTglJadi" placeholder="Masukkan Tanggal Jadi Anggota" required>
+        value="<?= isset($old['tanggal_jadi']) ? htmlspecialchars($old['tanggal_jadi']) : '' ?>">
         </label>
 
         <label for="txtSkill"><span>Kemampuan Anggota:</span>
           <input type="text" id="txtSkill" name="txtSkill" placeholder="Masukkan Kemampuan Anggota" required>
+        value="<?= isset($old['kemampuan_anggota']) ? htmlspecialchars($old['kemampuan_anggota']) : '' ?>">
         </label>
 
         <label for="txtGaji"><span>Gaji Anggota:</span>
           <input type="text" id="txtGaji" name="txtGaji" placeholder="Masukkan Gaji Anggota" required>
+        value="<?= isset($old['gaji_anggota']) ? htmlspecialchars($old['gaji_anggota']) : '' ?>">
         </label>
 
         <label for="txtNoWA"><span>Nomor WA:</span>
           <input type="text" id="txtNoWA" name="txtNoWA" placeholder="Masukkan Nomor WA" required>
+        value="<?= isset($old['nomor_wa']) ? htmlspecialchars($old['nomor_wa']) : '' ?>">
         </label>
 
         <label for="txBatalion"><span>Batalion Anggota:</span>
           <input type="text" id="txBatalion" name="txBatalion" placeholder="Masukkan Batalion Anggota" required>
+        value="<?= isset($old['batalion_anggota']) ? htmlspecialchars($old['batalion_anggota']) : '' ?>">
         </label>
 
         <label for="txtBB"><span>Berat Badan:</span>
           <input type="text" id="txtBB" name="txtBB" placeholder="Masukkan Berat Badan" required>
+          value="<?= isset($old['berat_badan']) ? htmlspecialchars($old['berat_badan']) : '' ?>">
         </label>
 
         <label for="txtTB"><span>Tinggi Badan:</span>
           <input type="text" id="txtTB" name="txtTB" placeholder="Masukkan Tinggi Badan" required>
+        value="<?= isset($old['tinggi_badan']) ? htmlspecialchars($old['tinggi_badan']) : '' ?>">
         </label>
 
         <button type="submit">Kirim</button>

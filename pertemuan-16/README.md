@@ -18,4 +18,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>menambahkan kode bind parameter dan eksekusi pada file Proses_anggota.php</li>
   <li>menambahkan kode Value pada file read.php beserta dengan link edit dan delete</li>
   <li>menambahkan kode flash error/sukses pada file index.php</li>
+  <li>menambahkan kode Values html yang kurang pada file index.php section anggota</li>
 </ol>
