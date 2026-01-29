@@ -103,14 +103,21 @@ if (mb_strlen($tb) > 3) {
   simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
   */
   if (!empty($errors)) {
-    $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan
-    ];
+  $_SESSION['old'] = [
+    'nomor_anggota'  => $no,
+    'nama_anggota' => $nama,
+    'jabatan_anggota' => $jabatan,
+    'tanggal_jadi' => $tanggal,
+    'kemampuan_anggota'  => $skill,
+    'gaji_anggota' => $gaji,
+    'nomor_wa' => $nowa,
+    'batalion_anggota' => $batalion,
+    'berat_badan'  => $bb,
+    'tinggi_badan' => $tb,
+  ];
 
     $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit.php?cid='. (int)$cid);
+    redirect_ke('edit.php?nomor_anggota='. (int)$no);
   }
 
   /*
