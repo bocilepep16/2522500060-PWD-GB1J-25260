@@ -25,7 +25,7 @@ $tb = bersihkan($_POST['txtTB'] ?? '');
 $errors = []; #ini array untuk menampung semua error yang ada
 
 if ($no === '') {
-  $errors[] = 'No Anggota wajib diisi.';
+  $errors[] = 'No wajib diisi.';
 }
 if ($nama === '') {
   $errors[] = 'nama wajib diisi.';
@@ -53,6 +53,37 @@ if ($bb === '') {
 }
 if ($tb === '') {
   $errors[] = 'Tinggi Badan wajib diisi.';
+}
+
+if (mb_strlen($no) < 10) {
+  $errors[] = 'No Anggota minimal 10 karakter.';
+}
+if (mb_strlen($nama) > 25) {
+  $errors[] = 'nama maksimal 25 karakter.';
+}
+if (mb_strlen($jabatan) < 10) {
+  $errors[] = 'Jabatan minimal 10 karakter.';
+}
+if (mb_strlen($tanggal) < 5) {
+  $errors[] = 'tanggal minimal 5 karakter.';
+}
+if (mb_strlen($skill) > 15) {
+  $errors[] = 'skill maksimal 15 karakter.';
+}
+if (mb_strlen($gaji) < 10) {
+  $errors[] = 'gaji minimal 10 karakter.';
+}
+if (mb_strlen($nowa) < 12) {
+  $errors[] = 'nowa minimal 12 karakter.';
+}
+if (mb_strlen($batalion) < 10) {
+  $errors[] = 'batalion minimal 10 karakter.';
+}
+if (mb_strlen($bb) > 3) {
+  $errors[] = 'beratbadan maksimal 3 karakter.';
+}
+if (mb_strlen($tb) > 3) {
+  $errors[] = 'tinggi badan maksimal 3 karakter.';
 }
 
 $arrAnggota = [

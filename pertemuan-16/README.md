@@ -11,4 +11,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>mengexport file sql dari phpmyadmin ke file pertemuan 16</li>
   <li>Menambahkan kode ambil dan bersihkan nilai dari form pada file proses_anggota.php</li>
   <li>Menambahkan Validasi Sederhana Pada File Proses_anggota.php</li>
+  <li>Menambahkan Validasi Sederhana Yang Kurang Pada File Proses_anggota.php</li>
 </ol>
