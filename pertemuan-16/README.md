@@ -12,4 +12,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>Menambahkan kode ambil dan bersihkan nilai dari form pada file proses_anggota.php</li>
   <li>Menambahkan Validasi Sederhana Pada File Proses_anggota.php</li>
   <li>Menambahkan Validasi Sederhana Yang Kurang Pada File Proses_anggota.php</li>
+  <li>Menambahkan Kode Method yang dizinkan hanya POST</li>
 </ol>
