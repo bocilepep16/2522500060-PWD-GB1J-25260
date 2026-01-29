@@ -10,9 +10,10 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   <li>membuat tabel anggota di phpmyadmin</li>
   <li>mengexport file sql dari phpmyadmin ke file pertemuan 16</li>
   <li>Menambahkan kode ambil dan bersihkan nilai dari form pada file proses_anggota.php</li>
-  <li>Menambahkan Validasi Sederhana Pada File Proses_anggota.php</li>
-  <li>Menambahkan Validasi Sederhana Yang Kurang Pada File Proses_anggota.php</li>
+  <li>Menambahkan Validasi Sederhana Pada file Proses_anggota.php</li>
+  <li>Menambahkan Validasi Sederhana Yang Kurang Pada file Proses_anggota.php</li>
   <li>Menambahkan Kode Method yang dizinkan hanya POST</li>
   <li>menambahkan Kode simpan nilai lama dan pesan error, lalu redirect (konsep PRG)</li>
   </li>Menambahkan kode untuk menyiapkan query INSERT dengan prepared statement</li>
+  <li>menambahkan kode bind parameter dan eksekusi pada file Proses_anggota.php</li>
 </ol>

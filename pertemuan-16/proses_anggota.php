@@ -117,6 +117,31 @@ if (!$stmt) {
   $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
   redirect_ke('index.php#anggota');
 }
+#bind parameter dan eksekusi (s = string, i = integer)
+mysqli_stmt_bind_param($stmt, "sssssssssi", $nama, $jabatan, $tanggal, $skill, $gaji, $nowa, $batalion, $bb, $tb, $no);
+
+if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesan sukses
+  unset($_SESSION['old']);
+  $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah tersimpan.';
+  redirect_ke('index.php#anggota'); #pola PRG: kembali ke form / halaman home
+} else { #jika gagal, simpan kembali old value dan tampilkan error umum
+  $_SESSION['old'] = [
+    'nomor_anggota'  => $no,
+    'nama_anggota' => $nama,
+    'jabatan_anggota' => $jabatan,
+    'tanggal_jadi' => $tanggal,
+    'kemampuan_anggota'  => $skill,
+    'gaji_anggota' => $gaji,
+    'nomor_wa' => $nowa,
+    'batalion_anggota' => $batalion,
+    'berat_badan'  => $bb,
+    'tinggi_badan' => $tb,
+  ];
+  $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
+  redirect_ke('index.php#anggota');
+}
+#tutup statement
+mysqli_stmt_close($stmt);
 
 $arrAnggota = [
   "noang" => $_POST["txtNoAng"] ?? "",
