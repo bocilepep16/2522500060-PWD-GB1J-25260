@@ -20,7 +20,7 @@
   }
 
   #ambil dan bersihkan (sanitasi) nilai dari form
-  $no  = bersihkan($_POST['txtNoAng']  ?? '');
+  #$no  = bersihkan($_POST['txtNoAng']  ?? '');
   $nama = bersihkan($_POST['txtNmAng'] ?? '');
   $jabatan = bersihkan($_POST['txtJabAng'] ?? '');
   $tanggal = bersihkan($_POST['txtTglJadi'] ?? '');
@@ -33,35 +33,70 @@
   #Validasi sederhana
   $errors = []; #ini array untuk menampung semua error yang ada
 
-  if ($nama === '') {
-    $errors[] = 'Nama wajib diisi.';
-  }
+  #Validasi sederhana
+$errors = []; #ini array untuk menampung semua error yang ada
 
-  if ($email === '') {
-    $errors[] = 'Email wajib diisi.';
-  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Format e-mail tidak valid.';
-  }
+// if ($no === '') {
+//   $errors[] = 'No wajib diisi.';
+// }
+if ($nama === '') {
+  $errors[] = 'nama wajib diisi.';
+}
+if ($jabatan === '') {
+  $errors[] = 'jabatan wajib diisi.';
+}
+if ($tanggal === '') {
+  $errors[] = 'tanggal wajib diisi.';
+}
+if ($skill === '') {
+  $errors[] = 'Kemampuan wajib diisi.';
+}
+if ($gaji === '') {
+  $errors[] = 'Gaji wajib diisi.';
+}
+if ($nowa === '') {
+  $errors[] = 'No wa wajib diisi.';
+}
+if ($batalion === '') {
+  $errors[] = 'Batalion anggota wajib diisi.';
+}
+if ($bb === '') {
+  $errors[] = 'Berat badan wajib diisi.';
+}
+if ($tb === '') {
+  $errors[] = 'Tinggi Badan wajib diisi.';
+}
 
-  if ($pesan === '') {
-    $errors[] = 'Pesan wajib diisi.';
-  }
-
-  if ($captcha === '') {
-    $errors[] = 'Pertanyaan wajib diisi.';
-  }
-
-  if (mb_strlen($nama) < 3) {
-    $errors[] = 'Nama minimal 3 karakter.';
-  }
-
-  if (mb_strlen($pesan) < 10) {
-    $errors[] = 'Pesan minimal 10 karakter.';
-  }
-
-  if ($captcha!=="6") {
-    $errors[] = 'Jawaban '. $captcha.' captcha salah.';
-  }
+// if (mb_strlen($no) < 10) {
+//   $errors[] = 'No Anggota minimal 10 karakter.';
+// }
+if (mb_strlen($nama) > 25) {
+  $errors[] = 'nama maksimal 25 karakter.';
+}
+if (mb_strlen($jabatan) < 10) {
+  $errors[] = 'Jabatan minimal 10 karakter.';
+}
+if (mb_strlen($tanggal) < 5) {
+  $errors[] = 'tanggal minimal 5 karakter.';
+}
+if (mb_strlen($skill) > 15) {
+  $errors[] = 'skill maksimal 15 karakter.';
+}
+if (mb_strlen($gaji) < 10) {
+  $errors[] = 'gaji minimal 10 karakter.';
+}
+if (mb_strlen($nowa) < 12) {
+  $errors[] = 'nowa minimal 12 karakter.';
+}
+if (mb_strlen($batalion) < 10) {
+  $errors[] = 'batalion minimal 10 karakter.';
+}
+if (mb_strlen($bb) > 3) {
+  $errors[] = 'beratbadan maksimal 3 karakter.';
+}
+if (mb_strlen($tb) > 3) {
+  $errors[] = 'tinggi badan maksimal 3 karakter.';
+}
 
   /*
   kondisi di bawah ini hanya dikerjakan jika ada error, 
