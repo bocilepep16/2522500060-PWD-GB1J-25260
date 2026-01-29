@@ -10,7 +10,7 @@ require_once __DIR__ . '/fungsi.php';
 */
 
 #ambil dan bersihkan nilai dari form
-$No  = bersihkan($_POST['txtNoAng']  ?? '');
+$no  = bersihkan($_POST['txtNoAng']  ?? '');
 $nama = bersihkan($_POST['txtNmAng'] ?? '');
 $jabatan = bersihkan($_POST['txtJabAng'] ?? '');
 $tanggal = bersihkan($_POST['txtTglJadi'] ?? '');
@@ -20,6 +20,40 @@ $nowa = bersihkan($_POST['txtNoWA'] ?? '');
 $batalion = bersihkan($_POST['txBatalion'] ?? '');
 $bb = bersihkan($_POST['txtBB'] ?? '');
 $tb = bersihkan($_POST['txtTB'] ?? '');
+
+#Validasi sederhana
+$errors = []; #ini array untuk menampung semua error yang ada
+
+if ($no === '') {
+  $errors[] = 'No Anggota wajib diisi.';
+}
+if ($nama === '') {
+  $errors[] = 'nama wajib diisi.';
+}
+if ($jabatan === '') {
+  $errors[] = 'jabatan wajib diisi.';
+}
+if ($tanggal === '') {
+  $errors[] = 'tanggal wajib diisi.';
+}
+if ($skill === '') {
+  $errors[] = 'Kemampuan wajib diisi.';
+}
+if ($gaji === '') {
+  $errors[] = 'Gaji wajib diisi.';
+}
+if ($nowa === '') {
+  $errors[] = 'No wa wajib diisi.';
+}
+if ($batalion === '') {
+  $errors[] = 'Batalion anggota wajib diisi.';
+}
+if ($bb === '') {
+  $errors[] = 'Berat badan wajib diisi.';
+}
+if ($tb === '') {
+  $errors[] = 'Tinggi Badan wajib diisi.';
+}
 
 $arrAnggota = [
   "noang" => $_POST["txtNoAng"] ?? "",
