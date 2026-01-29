@@ -17,4 +17,5 @@ Hari Ini, Kamis 8 Januari 2026, Saya Mempelajari:
   </li>Menambahkan kode untuk menyiapkan query INSERT dengan prepared statement</li>
   <li>menambahkan kode bind parameter dan eksekusi pada file Proses_anggota.php</li>
   <li>menambahkan kode Value pada file read.php beserta dengan link edit dan delete</li>
+  <li>menambahkan kode flash error/sukses pada file index.php</li>
 </ol>
